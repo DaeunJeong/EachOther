@@ -21,23 +21,26 @@
                             <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="familyImage.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9xU-lv-eYn">
                                 <rect key="frame" x="0.0" y="64" width="375" height="453"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1f-xa-vPb">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T1f-xa-vPb" customClass="RoundButton" customModule="EachOther" customModuleProvider="target">
                                 <rect key="frame" x="40" y="537" width="295" height="45"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.51226496700000002" green="0.85831612349999997" blue="0.87451893089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="qd1-cg-KbR"/>
                                 </constraints>
-                                <state key="normal" title="연결하기"/>
+                                <state key="normal" title="연결하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="AuG-TH-2UR" kind="show" id="ntT-Ks-2G8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mx5-Hf-3vy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mx5-Hf-3vy" customClass="RoundButton" customModule="EachOther" customModuleProvider="target">
                                 <rect key="frame" x="40" y="597" width="295" height="45"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="mPL-Z1-vhm"/>
                                 </constraints>
+                                <color key="tintColor" red="0.51226496700000002" green="0.85831612349999997" blue="0.87451893089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <state key="normal" title="코드발급받기"/>
                                 <connections>
                                     <segue destination="zK8-1Z-Lpe" kind="show" id="8nu-Zr-KOb"/>
@@ -142,20 +145,15 @@
                                 </date>
                                 <locale key="locale" localeIdentifier="ko_KR"/>
                             </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fF1-TP-TYH">
-                                <rect key="frame" x="30" y="528" width="30" height="30"/>
-                                <state key="normal" title="양력"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K26-D2-dpl">
-                                <rect key="frame" x="75" y="528" width="30" height="30"/>
-                                <state key="normal" title="음력"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hc-Oa-uE7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hc-Oa-uE7" customClass="RoundButton" customModule="EachOther" customModuleProvider="target">
                                 <rect key="frame" x="34" y="597" width="307" height="50"/>
+                                <color key="backgroundColor" red="0.51226496700000002" green="0.85831612349999997" blue="0.87451893089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="iyp-G1-Pua"/>
                                 </constraints>
-                                <state key="normal" title="연결하기"/>
+                                <state key="normal" title="연결하기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="Vdr-2H-Bh6" kind="show" id="M2v-iO-WWn"/>
                                 </connections>
@@ -164,11 +162,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="AHF-xx-606" firstAttribute="top" secondItem="5kR-RK-2z1" secondAttribute="bottom" constant="50" id="1FG-hS-gRG"/>
-                            <constraint firstItem="fF1-TP-TYH" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="30" id="3KH-kc-syR"/>
                             <constraint firstItem="Knx-SI-JOg" firstAttribute="top" secondItem="hbL-ua-Vjg" secondAttribute="top" constant="38" id="3LH-Z3-kuO"/>
                             <constraint firstItem="bf3-85-QCG" firstAttribute="centerY" secondItem="kBA-PT-QuE" secondAttribute="centerY" id="4pJ-c0-I5F"/>
                             <constraint firstItem="5kR-RK-2z1" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="32" id="9xq-Sl-L5Q"/>
-                            <constraint firstItem="K26-D2-dpl" firstAttribute="leading" secondItem="fF1-TP-TYH" secondAttribute="trailing" constant="15" id="Ges-v4-RVQ"/>
                             <constraint firstItem="7hc-Oa-uE7" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="34" id="IzW-bS-1NO"/>
                             <constraint firstItem="Knx-SI-JOg" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="30" id="Jgt-FU-sfc"/>
                             <constraint firstItem="5jB-WQ-G8r" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" id="NUa-4c-uPa"/>
@@ -182,10 +178,8 @@
                             <constraint firstItem="kBA-PT-QuE" firstAttribute="leading" secondItem="gbR-5Y-lcj" secondAttribute="trailing" constant="42" id="bzx-CI-BWu"/>
                             <constraint firstItem="bal-Bh-eXV" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="30" id="cB6-yz-Jga"/>
                             <constraint firstItem="5jB-WQ-G8r" firstAttribute="trailing" secondItem="hbL-ua-Vjg" secondAttribute="trailing" id="e2X-DX-xyR"/>
-                            <constraint firstItem="fF1-TP-TYH" firstAttribute="top" secondItem="5jB-WQ-G8r" secondAttribute="bottom" constant="8" id="haF-KL-v96"/>
                             <constraint firstItem="kBA-PT-QuE" firstAttribute="top" secondItem="bal-Bh-eXV" secondAttribute="bottom" constant="20" id="iFA-q1-fTX"/>
                             <constraint firstItem="hbL-ua-Vjg" firstAttribute="bottom" secondItem="7hc-Oa-uE7" secondAttribute="bottom" constant="20" id="lE1-tN-vEY"/>
-                            <constraint firstItem="K26-D2-dpl" firstAttribute="top" secondItem="5jB-WQ-G8r" secondAttribute="bottom" constant="8" id="lL1-KN-cOa"/>
                             <constraint firstItem="gbR-5Y-lcj" firstAttribute="top" secondItem="bal-Bh-eXV" secondAttribute="bottom" constant="20" id="rcS-yG-dgW"/>
                             <constraint firstItem="bf3-85-QCG" firstAttribute="leading" secondItem="kBA-PT-QuE" secondAttribute="trailing" constant="42" id="x6L-YD-kou"/>
                             <constraint firstItem="AHF-xx-606" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="30" id="xVq-Qk-dAs"/>
@@ -238,19 +232,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbd-aO-hdr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbd-aO-hdr" customClass="RoundButton" customModule="EachOther" customModuleProvider="target">
                                 <rect key="frame" x="40" y="567" width="295" height="50"/>
+                                <color key="backgroundColor" red="0.51226496700000002" green="0.85831612349999997" blue="0.87451893089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="G5S-ap-aM0"/>
                                 </constraints>
-                                <state key="normal" title="연결하러 가기"/>
+                                <state key="normal" title="연결하러 가기">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="메인으로 가기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h1i-bD-L0Q">
-                                <rect key="frame" x="149.5" y="625" width="76.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -264,8 +255,6 @@
                             <constraint firstItem="7AX-Ac-iWJ" firstAttribute="centerX" secondItem="VTO-0D-Qgp" secondAttribute="centerX" id="WAI-S4-1Fo"/>
                             <constraint firstItem="FA0-a0-4Fg" firstAttribute="centerX" secondItem="VTO-0D-Qgp" secondAttribute="centerX" id="fnd-DD-jti"/>
                             <constraint firstItem="LLR-1j-U6x" firstAttribute="leading" secondItem="lCN-Ww-XeA" secondAttribute="leading" constant="93" id="oCE-b9-3nU"/>
-                            <constraint firstItem="h1i-bD-L0Q" firstAttribute="centerX" secondItem="VTO-0D-Qgp" secondAttribute="centerX" id="sDu-Sf-GNo"/>
-                            <constraint firstItem="h1i-bD-L0Q" firstAttribute="top" secondItem="pbd-aO-hdr" secondAttribute="bottom" constant="8" id="sEv-uh-ZmO"/>
                             <constraint firstItem="9Lt-RX-0Ds" firstAttribute="top" secondItem="7AX-Ac-iWJ" secondAttribute="bottom" constant="9" id="vFT-c0-NMX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lCN-Ww-XeA"/>
