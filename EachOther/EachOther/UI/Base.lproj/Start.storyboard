@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x25-7U-nD5">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="x25-7U-nD5">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -77,19 +77,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="코드를 입력해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Knx-SI-JOg">
-                                <rect key="frame" x="30" y="102" width="137" height="21"/>
+                                <rect key="frame" x="30" y="102" width="137" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 가족 내 역할을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bal-Bh-eXV">
-                                <rect key="frame" x="30" y="213" width="239" height="21"/>
+                                <rect key="frame" x="30" y="212.5" width="238.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="drh-IJ-TTT">
-                                <rect key="frame" x="30" y="133" width="200" height="30"/>
+                                <rect key="frame" x="30" y="132.5" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="Frf-ga-oS2"/>
                                 </constraints>
@@ -97,46 +97,70 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kR-RK-2z1">
-                                <rect key="frame" x="32" y="254" width="46" height="30"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wM4-US-NP2">
+                                <rect key="frame" x="30" y="253" width="285" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kR-RK-2z1" customClass="DLRadioButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="아빠  ">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <outletCollection property="otherButtons" destination="gbR-5Y-lcj" id="X9p-NU-kEt"/>
+                                            <outletCollection property="otherButtons" destination="kBA-PT-QuE" id="fG6-sk-Q5l"/>
+                                            <outletCollection property="otherButtons" destination="bf3-85-QCG" id="7ZW-C2-wge"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbR-5Y-lcj" customClass="DLRadioButton">
+                                        <rect key="frame" x="71.5" y="0.0" width="71" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="엄마  ">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <outletCollection property="otherButtons" destination="5kR-RK-2z1" id="8Rb-tv-eFT"/>
+                                            <outletCollection property="otherButtons" destination="kBA-PT-QuE" id="Jfe-km-IkC"/>
+                                            <outletCollection property="otherButtons" destination="bf3-85-QCG" id="dlp-Dt-aBX"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBA-PT-QuE" customClass="DLRadioButton">
+                                        <rect key="frame" x="142.5" y="0.0" width="71.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" title="아들  ">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <outletCollection property="otherButtons" destination="5kR-RK-2z1" id="GXo-dt-oCZ"/>
+                                            <outletCollection property="otherButtons" destination="gbR-5Y-lcj" id="Z15-SX-GGh"/>
+                                            <outletCollection property="otherButtons" destination="bf3-85-QCG" id="45U-VV-Xvr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-85-QCG" customClass="DLRadioButton">
+                                        <rect key="frame" x="214" y="0.0" width="71" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="딸  ">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <outletCollection property="otherButtons" destination="5kR-RK-2z1" id="KeS-U1-LSF"/>
+                                            <outletCollection property="otherButtons" destination="gbR-5Y-lcj" id="K1J-8S-aoz"/>
+                                            <outletCollection property="otherButtons" destination="kBA-PT-QuE" id="BSx-bw-UUa"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="Aoq-TU-C9o"/>
-                                    <constraint firstAttribute="height" constant="30" id="RHk-qU-z8C"/>
+                                    <constraint firstAttribute="height" constant="30" id="KDh-KB-AYJ"/>
                                 </constraints>
-                                <state key="normal" title="아빠"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbR-5Y-lcj">
-                                <rect key="frame" x="120" y="254" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="9kD-7J-HOB"/>
-                                    <constraint firstAttribute="height" constant="30" id="hgQ-cg-4FX"/>
-                                </constraints>
-                                <state key="normal" title="엄마"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBA-PT-QuE">
-                                <rect key="frame" x="208" y="254" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="VK9-lo-lEz"/>
-                                    <constraint firstAttribute="height" constant="30" id="kjl-MV-OG0"/>
-                                </constraints>
-                                <state key="normal" title="아들"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-85-QCG">
-                                <rect key="frame" x="296" y="254" width="46" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Frv-lV-knL"/>
-                                    <constraint firstAttribute="width" constant="46" id="vrz-la-2nd"/>
-                                </constraints>
-                                <state key="normal" title="딸"/>
-                            </button>
+                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생일을 입력해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHF-xx-606">
-                                <rect key="frame" x="30" y="334" width="137" height="21"/>
+                                <rect key="frame" x="30" y="313" width="137" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5jB-WQ-G8r">
-                                <rect key="frame" x="0.0" y="370" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="348.5" width="375" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="4oM-ZC-Zo9"/>
                                 </constraints>
@@ -161,27 +185,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="AHF-xx-606" firstAttribute="top" secondItem="5kR-RK-2z1" secondAttribute="bottom" constant="50" id="1FG-hS-gRG"/>
+                            <constraint firstItem="wM4-US-NP2" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="30" id="36w-lm-fHp"/>
                             <constraint firstItem="Knx-SI-JOg" firstAttribute="top" secondItem="hbL-ua-Vjg" secondAttribute="top" constant="38" id="3LH-Z3-kuO"/>
-                            <constraint firstItem="bf3-85-QCG" firstAttribute="centerY" secondItem="kBA-PT-QuE" secondAttribute="centerY" id="4pJ-c0-I5F"/>
-                            <constraint firstItem="5kR-RK-2z1" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="32" id="9xq-Sl-L5Q"/>
+                            <constraint firstItem="hbL-ua-Vjg" firstAttribute="trailing" secondItem="wM4-US-NP2" secondAttribute="trailing" constant="60" id="HvT-OS-pmj"/>
                             <constraint firstItem="7hc-Oa-uE7" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="34" id="IzW-bS-1NO"/>
                             <constraint firstItem="Knx-SI-JOg" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="30" id="Jgt-FU-sfc"/>
                             <constraint firstItem="5jB-WQ-G8r" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" id="NUa-4c-uPa"/>
-                            <constraint firstItem="5kR-RK-2z1" firstAttribute="top" secondItem="bal-Bh-eXV" secondAttribute="bottom" constant="20" id="QTd-dY-56i"/>
                             <constraint firstItem="drh-IJ-TTT" firstAttribute="top" secondItem="Knx-SI-JOg" secondAttribute="bottom" constant="10" id="TbU-hK-tNx"/>
-                            <constraint firstItem="hbL-ua-Vjg" firstAttribute="trailing" secondItem="bf3-85-QCG" secondAttribute="trailing" constant="33" id="UvS-cL-9Y2"/>
                             <constraint firstItem="bal-Bh-eXV" firstAttribute="top" secondItem="drh-IJ-TTT" secondAttribute="bottom" constant="50" id="Xw0-k9-M9O"/>
                             <constraint firstItem="5jB-WQ-G8r" firstAttribute="top" secondItem="AHF-xx-606" secondAttribute="bottom" constant="15" id="Zk9-P7-t0r"/>
                             <constraint firstItem="drh-IJ-TTT" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="30" id="a4I-oX-C3W"/>
-                            <constraint firstItem="gbR-5Y-lcj" firstAttribute="leading" secondItem="5kR-RK-2z1" secondAttribute="trailing" constant="42" id="axf-ok-KWY"/>
-                            <constraint firstItem="kBA-PT-QuE" firstAttribute="leading" secondItem="gbR-5Y-lcj" secondAttribute="trailing" constant="42" id="bzx-CI-BWu"/>
                             <constraint firstItem="bal-Bh-eXV" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="30" id="cB6-yz-Jga"/>
                             <constraint firstItem="5jB-WQ-G8r" firstAttribute="trailing" secondItem="hbL-ua-Vjg" secondAttribute="trailing" id="e2X-DX-xyR"/>
-                            <constraint firstItem="kBA-PT-QuE" firstAttribute="top" secondItem="bal-Bh-eXV" secondAttribute="bottom" constant="20" id="iFA-q1-fTX"/>
+                            <constraint firstItem="wM4-US-NP2" firstAttribute="top" secondItem="bal-Bh-eXV" secondAttribute="bottom" constant="20" id="fB1-66-7TR"/>
+                            <constraint firstItem="AHF-xx-606" firstAttribute="top" secondItem="wM4-US-NP2" secondAttribute="bottom" constant="30" id="iUD-wf-gMR"/>
                             <constraint firstItem="hbL-ua-Vjg" firstAttribute="bottom" secondItem="7hc-Oa-uE7" secondAttribute="bottom" constant="20" id="lE1-tN-vEY"/>
-                            <constraint firstItem="gbR-5Y-lcj" firstAttribute="top" secondItem="bal-Bh-eXV" secondAttribute="bottom" constant="20" id="rcS-yG-dgW"/>
-                            <constraint firstItem="bf3-85-QCG" firstAttribute="leading" secondItem="kBA-PT-QuE" secondAttribute="trailing" constant="42" id="x6L-YD-kou"/>
                             <constraint firstItem="AHF-xx-606" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="30" id="xVq-Qk-dAs"/>
                             <constraint firstItem="hbL-ua-Vjg" firstAttribute="trailing" secondItem="7hc-Oa-uE7" secondAttribute="trailing" constant="34" id="zbe-Zr-Crt"/>
                         </constraints>
@@ -215,13 +233,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="입니다!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Lt-RX-0Ds">
-                                <rect key="frame" x="210" y="245" width="52" height="22"/>
+                                <rect key="frame" x="161.5" y="276" width="52" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TDSJLDN13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLR-1j-U6x">
-                                <rect key="frame" x="93" y="244" width="109" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0000000000" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LLR-1j-U6x">
+                                <rect key="frame" x="112.5" y="244" width="150" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="eUW-IJ-7uF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" name="linkColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
@@ -241,28 +262,41 @@
                                 <state key="normal" title="연결하러 가기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <segue destination="AuG-TH-2UR" kind="show" id="XLo-vO-uAh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fFW-Pf-YPi">
+                                <rect key="frame" x="267.5" y="241" width="30" height="30"/>
+                                <state key="normal" title="복사"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="pbd-aO-hdr" firstAttribute="top" secondItem="FA0-a0-4Fg" secondAttribute="bottom" constant="20" id="581-04-yYa"/>
+                            <constraint firstItem="fFW-Pf-YPi" firstAttribute="centerY" secondItem="LLR-1j-U6x" secondAttribute="centerY" id="8PQ-cy-Ydg"/>
                             <constraint firstItem="lCN-Ww-XeA" firstAttribute="bottom" secondItem="pbd-aO-hdr" secondAttribute="bottom" constant="50" id="9QX-5I-CTj"/>
-                            <constraint firstItem="LLR-1j-U6x" firstAttribute="top" secondItem="7AX-Ac-iWJ" secondAttribute="bottom" constant="8" id="Bc9-h7-GJ8"/>
                             <constraint firstItem="lCN-Ww-XeA" firstAttribute="trailing" secondItem="pbd-aO-hdr" secondAttribute="trailing" constant="40" id="C43-M9-1YL"/>
                             <constraint firstItem="pbd-aO-hdr" firstAttribute="leading" secondItem="lCN-Ww-XeA" secondAttribute="leading" constant="40" id="Hrk-BA-MeZ"/>
-                            <constraint firstItem="9Lt-RX-0Ds" firstAttribute="leading" secondItem="LLR-1j-U6x" secondAttribute="trailing" constant="8" id="If9-vN-O7Q"/>
+                            <constraint firstItem="fFW-Pf-YPi" firstAttribute="leading" secondItem="LLR-1j-U6x" secondAttribute="trailing" constant="5" id="Ivc-eJ-i33"/>
+                            <constraint firstItem="LLR-1j-U6x" firstAttribute="top" secondItem="7AX-Ac-iWJ" secondAttribute="bottom" constant="8" id="MAI-Ok-oW6"/>
+                            <constraint firstItem="LLR-1j-U6x" firstAttribute="centerX" secondItem="VTO-0D-Qgp" secondAttribute="centerX" id="Obf-JL-ZHy"/>
                             <constraint firstItem="7AX-Ac-iWJ" firstAttribute="top" secondItem="lCN-Ww-XeA" secondAttribute="top" constant="150" id="PFy-y1-0BM"/>
+                            <constraint firstItem="9Lt-RX-0Ds" firstAttribute="centerX" secondItem="VTO-0D-Qgp" secondAttribute="centerX" id="TmJ-i2-Zv5"/>
                             <constraint firstItem="7AX-Ac-iWJ" firstAttribute="centerX" secondItem="VTO-0D-Qgp" secondAttribute="centerX" id="WAI-S4-1Fo"/>
+                            <constraint firstItem="9Lt-RX-0Ds" firstAttribute="top" secondItem="LLR-1j-U6x" secondAttribute="bottom" constant="8" id="ZmO-AG-lX9"/>
                             <constraint firstItem="FA0-a0-4Fg" firstAttribute="centerX" secondItem="VTO-0D-Qgp" secondAttribute="centerX" id="fnd-DD-jti"/>
-                            <constraint firstItem="LLR-1j-U6x" firstAttribute="leading" secondItem="lCN-Ww-XeA" secondAttribute="leading" constant="93" id="oCE-b9-3nU"/>
-                            <constraint firstItem="9Lt-RX-0Ds" firstAttribute="top" secondItem="7AX-Ac-iWJ" secondAttribute="bottom" constant="9" id="vFT-c0-NMX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="lCN-Ww-XeA"/>
                     </view>
+                    <connections>
+                        <outlet property="codeCopyButton" destination="fFW-Pf-YPi" id="hfn-PW-dDq"/>
+                        <outlet property="codeLabel" destination="LLR-1j-U6x" id="haX-e3-HGX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tI1-dk-BCF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1329" y="769"/>
+            <point key="canvasLocation" x="1328.8" y="768.66566716641682"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="d2w-zC-gdb">
@@ -284,6 +318,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="familyImage.jpg" width="426" height="640"/>
+        <image name="familyImage.jpg" width="102.23999786376953" height="153.60000610351562"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="XLo-vO-uAh"/>
+    </inferredMetricsTieBreakers>
 </document>

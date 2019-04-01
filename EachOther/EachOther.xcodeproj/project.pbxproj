@@ -21,6 +21,8 @@
 		C9126F8B2240DE43007E7FE4 /* CertifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9126F8A2240DE43007E7FE4 /* CertifyVC.swift */; };
 		C9126F8D224135B2007E7FE4 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9126F8C224135B2007E7FE4 /* CalendarCell.swift */; };
 		C9126F8F224136AC007E7FE4 /* SchedularVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9126F8E224136AC007E7FE4 /* SchedularVC.swift */; };
+		C95869BE224DB982002BCE55 /* CertifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95869BD224DB982002BCE55 /* CertifyModel.swift */; };
+		C96B3660224D13FA00A2B114 /* CertifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B365F224D13FA00A2B114 /* CertifyViewModel.swift */; };
 		C9743A4C2241CE740051F549 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4B2241CE740051F549 /* Base.swift */; };
 		C9743A4E22420FAD0051F549 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4D22420FAD0051F549 /* Shape.swift */; };
 		F1E7FF637EB3346565386FDA /* Pods_EachOtherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA6D99740CE4FC158FF0D8 /* Pods_EachOtherTests.framework */; };
@@ -60,6 +62,8 @@
 		C9126F8A2240DE43007E7FE4 /* CertifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyVC.swift; sourceTree = "<group>"; };
 		C9126F8C224135B2007E7FE4 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		C9126F8E224136AC007E7FE4 /* SchedularVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedularVC.swift; sourceTree = "<group>"; };
+		C95869BD224DB982002BCE55 /* CertifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyModel.swift; sourceTree = "<group>"; };
+		C96B365F224D13FA00A2B114 /* CertifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyViewModel.swift; sourceTree = "<group>"; };
 		C9743A4B2241CE740051F549 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		C9743A4D22420FAD0051F549 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -127,6 +131,7 @@
 		C9126F5A2240A629007E7FE4 /* EachOther */ = {
 			isa = PBXGroup;
 			children = (
+				C96B3659224D12F300A2B114 /* ViewModel */,
 				C9126F832240A6CA007E7FE4 /* Model */,
 				C9126F822240A6C5007E7FE4 /* VC */,
 				C9126F812240A6C0007E7FE4 /* Util */,
@@ -180,10 +185,8 @@
 		C9126F822240A6C5007E7FE4 /* VC */ = {
 			isa = PBXGroup;
 			children = (
-				C9126F5D2240A629007E7FE4 /* StartVC.swift */,
-				C9126F882240DDF4007E7FE4 /* ConnectVC.swift */,
-				C9126F8A2240DE43007E7FE4 /* CertifyVC.swift */,
-				C9126F8E224136AC007E7FE4 /* SchedularVC.swift */,
+				C96B365B224D132400A2B114 /* Main */,
+				C96B365A224D130C00A2B114 /* Start */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -191,8 +194,67 @@
 		C9126F832240A6CA007E7FE4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C95869BC224DB96B002BCE55 /* Main */,
+				C95869BB224DB964002BCE55 /* Start */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C95869BB224DB964002BCE55 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				C95869BD224DB982002BCE55 /* CertifyModel.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		C95869BC224DB96B002BCE55 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C96B3659224D12F300A2B114 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C96B365D224D13DC00A2B114 /* Start */,
+				C96B365C224D13D600A2B114 /* Main */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C96B365A224D130C00A2B114 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				C9126F5D2240A629007E7FE4 /* StartVC.swift */,
+				C9126F882240DDF4007E7FE4 /* ConnectVC.swift */,
+				C9126F8A2240DE43007E7FE4 /* CertifyVC.swift */,
+			);
+			path = Start;
+			sourceTree = "<group>";
+		};
+		C96B365B224D132400A2B114 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C9126F8E224136AC007E7FE4 /* SchedularVC.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C96B365C224D13D600A2B114 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C96B365D224D13DC00A2B114 /* Start */ = {
+			isa = PBXGroup;
+			children = (
+				C96B365F224D13FA00A2B114 /* CertifyViewModel.swift */,
+			);
+			path = Start;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,13 +368,21 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-EachOther/Pods-EachOther-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -374,9 +444,11 @@
 				C9126F642240A629007E7FE4 /* EachOther.xcdatamodeld in Sources */,
 				C9126F8F224136AC007E7FE4 /* SchedularVC.swift in Sources */,
 				C9126F8D224135B2007E7FE4 /* CalendarCell.swift in Sources */,
+				C96B3660224D13FA00A2B114 /* CertifyViewModel.swift in Sources */,
 				C9743A4E22420FAD0051F549 /* Shape.swift in Sources */,
 				C9126F892240DDF4007E7FE4 /* ConnectVC.swift in Sources */,
 				C9126F5E2240A629007E7FE4 /* StartVC.swift in Sources */,
+				C95869BE224DB982002BCE55 /* CertifyModel.swift in Sources */,
 				C9126F5C2240A629007E7FE4 /* AppDelegate.swift in Sources */,
 				C9126F8B2240DE43007E7FE4 /* CertifyVC.swift in Sources */,
 			);
