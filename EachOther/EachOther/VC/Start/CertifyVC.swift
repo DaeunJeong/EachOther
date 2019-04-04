@@ -26,7 +26,9 @@ class CertifyVC: UIViewController {
             .bind(to: codeLabel.rx.text)
             .disposed(by: disposeBag)
         
-        codeCopyButton.rx.tap.bind(to: certifyViewModel.copyCode).disposed(by: disposeBag)
+        codeCopyButton.rx.tap
+            .bind(to: certifyViewModel.copyCode)
+            .disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {

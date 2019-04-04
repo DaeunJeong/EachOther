@@ -98,10 +98,10 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wM4-US-NP2">
-                                <rect key="frame" x="30" y="253" width="285" height="30"/>
+                                <rect key="frame" x="30" y="253" width="265" height="30"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5kR-RK-2z1" customClass="DLRadioButton">
-                                        <rect key="frame" x="0.0" y="0.0" width="71.5" height="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="아빠  ">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,11 +109,10 @@
                                         <connections>
                                             <outletCollection property="otherButtons" destination="gbR-5Y-lcj" id="X9p-NU-kEt"/>
                                             <outletCollection property="otherButtons" destination="kBA-PT-QuE" id="fG6-sk-Q5l"/>
-                                            <outletCollection property="otherButtons" destination="bf3-85-QCG" id="7ZW-C2-wge"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbR-5Y-lcj" customClass="DLRadioButton">
-                                        <rect key="frame" x="71.5" y="0.0" width="71" height="30"/>
+                                        <rect key="frame" x="88.5" y="0.0" width="88" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                         <state key="normal" title="엄마  ">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -121,31 +120,17 @@
                                         <connections>
                                             <outletCollection property="otherButtons" destination="5kR-RK-2z1" id="8Rb-tv-eFT"/>
                                             <outletCollection property="otherButtons" destination="kBA-PT-QuE" id="Jfe-km-IkC"/>
-                                            <outletCollection property="otherButtons" destination="bf3-85-QCG" id="dlp-Dt-aBX"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kBA-PT-QuE" customClass="DLRadioButton">
-                                        <rect key="frame" x="142.5" y="0.0" width="71.5" height="30"/>
+                                        <rect key="frame" x="176.5" y="0.0" width="88.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                        <state key="normal" title="아들  ">
+                                        <state key="normal" title="자녀  ">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
                                         <connections>
                                             <outletCollection property="otherButtons" destination="5kR-RK-2z1" id="GXo-dt-oCZ"/>
                                             <outletCollection property="otherButtons" destination="gbR-5Y-lcj" id="Z15-SX-GGh"/>
-                                            <outletCollection property="otherButtons" destination="bf3-85-QCG" id="45U-VV-Xvr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bf3-85-QCG" customClass="DLRadioButton">
-                                        <rect key="frame" x="214" y="0.0" width="71" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                        <state key="normal" title="딸  ">
-                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                        <connections>
-                                            <outletCollection property="otherButtons" destination="5kR-RK-2z1" id="KeS-U1-LSF"/>
-                                            <outletCollection property="otherButtons" destination="gbR-5Y-lcj" id="K1J-8S-aoz"/>
-                                            <outletCollection property="otherButtons" destination="kBA-PT-QuE" id="BSx-bw-UUa"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -187,7 +172,7 @@
                         <constraints>
                             <constraint firstItem="wM4-US-NP2" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="30" id="36w-lm-fHp"/>
                             <constraint firstItem="Knx-SI-JOg" firstAttribute="top" secondItem="hbL-ua-Vjg" secondAttribute="top" constant="38" id="3LH-Z3-kuO"/>
-                            <constraint firstItem="hbL-ua-Vjg" firstAttribute="trailing" secondItem="wM4-US-NP2" secondAttribute="trailing" constant="60" id="HvT-OS-pmj"/>
+                            <constraint firstItem="hbL-ua-Vjg" firstAttribute="trailing" secondItem="wM4-US-NP2" secondAttribute="trailing" constant="80" id="HvT-OS-pmj"/>
                             <constraint firstItem="7hc-Oa-uE7" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="34" id="IzW-bS-1NO"/>
                             <constraint firstItem="Knx-SI-JOg" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" constant="30" id="Jgt-FU-sfc"/>
                             <constraint firstItem="5jB-WQ-G8r" firstAttribute="leading" secondItem="hbL-ua-Vjg" secondAttribute="leading" id="NUa-4c-uPa"/>
@@ -205,6 +190,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hbL-ua-Vjg"/>
                     </view>
+                    <connections>
+                        <outlet property="birthdayDatePicker" destination="5jB-WQ-G8r" id="wUy-EI-Lcs"/>
+                        <outlet property="childButton" destination="kBA-PT-QuE" id="Q8X-qe-vwD"/>
+                        <outlet property="codeTextField" destination="drh-IJ-TTT" id="y4Q-tl-SvB"/>
+                        <outlet property="connectButton" destination="7hc-Oa-uE7" id="eV5-GC-r3s"/>
+                        <outlet property="fatherButton" destination="5kR-RK-2z1" id="ZAQ-z1-ieY"/>
+                        <outlet property="motherButton" destination="gbR-5Y-lcj" id="x1Z-rh-qnI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2F-Fd-XQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

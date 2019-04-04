@@ -11,7 +11,7 @@ import RxCocoa
 import RxSwift
 
 class CertifyViewModel {
-    let connectModel: CertifyModel
+    let certifyModel: CertifyModel
     
     let code: Observable<String>
     let copyCode = PublishRelay<Void>()
@@ -19,13 +19,13 @@ class CertifyViewModel {
     let disposeBag = DisposeBag()
     
     init() {
-        connectModel = CertifyModel()
-        self.code = connectModel.code.asObservable()
-        self.connectModel.code.accept(generateCode())
+        certifyModel = CertifyModel()
+        self.code = certifyModel.code.asObservable()
+        self.certifyModel.code.accept(generateCode())
         
         copyCode
             .subscribe(onNext: { [weak self] _ in
-                UIPasteboard.general.string = self?.connectModel.code.value
+                UIPasteboard.general.string = self?.certifyModel.code.value
             }).disposed(by: disposeBag)
     }
     

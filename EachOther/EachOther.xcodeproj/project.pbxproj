@@ -26,6 +26,8 @@
 		C9743A4C2241CE740051F549 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4B2241CE740051F549 /* Base.swift */; };
 		C9743A4E22420FAD0051F549 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4D22420FAD0051F549 /* Shape.swift */; };
 		C9790A8D22539D8E00E5CB44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9790A8C22539D8E00E5CB44 /* GoogleService-Info.plist */; };
+		C9D3B50322548686009D0A87 /* ConnectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3B50222548685009D0A87 /* ConnectModel.swift */; };
+		C9D3B505225486E2009D0A87 /* ConnectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3B504225486E2009D0A87 /* ConnectViewModel.swift */; };
 		F1E7FF637EB3346565386FDA /* Pods_EachOtherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA6D99740CE4FC158FF0D8 /* Pods_EachOtherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +70,8 @@
 		C9743A4B2241CE740051F549 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		C9743A4D22420FAD0051F549 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		C9790A8C22539D8E00E5CB44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C9D3B50222548685009D0A87 /* ConnectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectModel.swift; sourceTree = "<group>"; };
+		C9D3B504225486E2009D0A87 /* ConnectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				C95869BD224DB982002BCE55 /* CertifyModel.swift */,
+				C9D3B50222548685009D0A87 /* ConnectModel.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 			isa = PBXGroup;
 			children = (
 				C96B365F224D13FA00A2B114 /* CertifyViewModel.swift */,
+				C9D3B504225486E2009D0A87 /* ConnectViewModel.swift */,
 			);
 			path = Start;
 			sourceTree = "<group>";
@@ -458,7 +464,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9D3B505225486E2009D0A87 /* ConnectViewModel.swift in Sources */,
 				C9743A4C2241CE740051F549 /* Base.swift in Sources */,
+				C9D3B50322548686009D0A87 /* ConnectModel.swift in Sources */,
 				C9126F642240A629007E7FE4 /* EachOther.xcdatamodeld in Sources */,
 				C9126F8F224136AC007E7FE4 /* SchedularVC.swift in Sources */,
 				C9126F8D224135B2007E7FE4 /* CalendarCell.swift in Sources */,
@@ -634,6 +642,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C5SCB28SAG;
 				INFOPLIST_FILE = EachOther/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -653,6 +662,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C5SCB28SAG;
 				INFOPLIST_FILE = EachOther/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
