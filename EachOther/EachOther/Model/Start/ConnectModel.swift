@@ -12,6 +12,7 @@ import RxCocoa
 
 struct ConnectModel {
     let code = Variable<String>("")
-    let role = Variable<String>("")
+    let name = Variable<String>("")
+    let role = Variable<String>("FATHER")
     let birthday = Variable<Date>(Date())
 }

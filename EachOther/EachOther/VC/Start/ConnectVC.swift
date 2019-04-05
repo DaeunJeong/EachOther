@@ -14,6 +14,7 @@ import RxSwift
 class ConnectVC: UIViewController {
     
     @IBOutlet weak var codeTextField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var fatherButton: DLRadioButton!
     @IBOutlet weak var motherButton: DLRadioButton!
     @IBOutlet weak var childButton: DLRadioButton!
@@ -31,6 +32,11 @@ class ConnectVC: UIViewController {
         codeTextField.rx.text
             .orEmpty
             .bind(to: self.connectViewModel.code)
+            .disposed(by: disposeBag)
+        
+        nameTextField.rx.text
+            .orEmpty
+            .bind(to: self.connectViewModel.name)
             .disposed(by: disposeBag)
         
         fatherButton.rx.tap
@@ -53,6 +59,9 @@ class ConnectVC: UIViewController {
             .bind(to: self.connectViewModel.birthday)
             .disposed(by: disposeBag)
         
+        connectViewModel.connectEnabled
+            .bind(to: connectButton.rx.isEnabled)
+            .disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {
