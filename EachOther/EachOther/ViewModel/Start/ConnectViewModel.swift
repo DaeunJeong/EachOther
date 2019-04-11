@@ -54,8 +54,7 @@ class ConnectViewModel {
         
         connect
             .subscribe(onNext: { [weak self] _ in
-                self?.db.collection(self?.connectModel.code.value ?? "ERROR").document(self?.connectModel.name.value ?? "ERROR").setData([
-                    "role": self?.connectModel.role.value ?? "ERROR",
+                self?.db.collection(self?.connectModel.code.value ?? "ERROR").document("userInfo").collection(self?.connectModel.role.value ?? "").document(self?.connectModel.name.value ?? "ERROR").setData([
                     "birthday": self?.connectModel.birthday.value ?? "ERROR"
                 ]) { err in
                     if let err = err {
@@ -68,12 +67,12 @@ class ConnectViewModel {
         
         father
             .subscribe(onNext: { [weak self] _ in
-                self?.connectModel.role.value = "FATHER"
+                self?.connectModel.role.value = "PARENT"
             }).disposed(by: disposeBag)
         
         mother
             .subscribe(onNext: { [weak self] _ in
-                self?.connectModel.role.value = "MOTHER"
+                self?.connectModel.role.value = "PARENT"
             }).disposed(by: disposeBag)
         
         child
