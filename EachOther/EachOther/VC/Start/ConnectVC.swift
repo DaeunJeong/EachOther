@@ -62,6 +62,16 @@ class ConnectVC: UIViewController {
         connectViewModel.connectEnabled
             .bind(to: connectButton.rx.isEnabled)
             .disposed(by: disposeBag)
+        
+        connectViewModel.result.subscribe{
+            if $0.error == nil {
+                self.performSegue(withIdentifier: "goMain", sender: nil)
+            } else {
+                let alert = UIAlertController(title: "오류", message: "모두 입력해주세요.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+        }.disposed(by: disposeBag)
     }
     
     override func viewWillAppear(_ animated: Bool) {

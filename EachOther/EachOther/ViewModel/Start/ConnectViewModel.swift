@@ -28,6 +28,7 @@ class ConnectViewModel {
     let mother = PublishRelay<Void>()
     let child = PublishRelay<Void>()
     let connect = PublishRelay<Void>()
+    let result = PublishRelay<Error?>()
     
     init() {
         let settings = FirestoreSettings()
@@ -58,9 +59,10 @@ class ConnectViewModel {
                     "birthday": self?.connectModel.birthday.value ?? "ERROR"
                 ]) { err in
                     if let err = err {
-                        print("Error writing document: \(err)")
+                        self?.result.accept(err)
                     } else {
-                        print("Document successfully written!")
+                        UserDefaults.standard.set(self?.connectModel.code.value, forKey: "FAMILYCODE")
+                        self?.result.accept(err)
                     }
                 }
             }).disposed(by: disposeBag)

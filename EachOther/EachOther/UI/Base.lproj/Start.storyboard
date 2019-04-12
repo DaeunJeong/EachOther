@@ -71,7 +71,7 @@
         <!--ConnectVC-->
         <scene sceneID="lhs-lb-Fzn">
             <objects>
-                <viewController id="AuG-TH-2UR" customClass="ConnectVC" customModule="EachOther" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="connect" id="AuG-TH-2UR" customClass="ConnectVC" customModule="EachOther" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="A8C-Gc-FMr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,9 +115,6 @@
                                 <state key="normal" title="연결하기">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Vdr-2H-Bh6" kind="show" id="M2v-iO-WWn"/>
-                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="당신의 가족 내 역할을 선택해주세요" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bal-Bh-eXV">
                                 <rect key="frame" x="30" y="260" width="238.5" height="20.5"/>
@@ -217,6 +214,7 @@
                         <outlet property="fatherButton" destination="5kR-RK-2z1" id="ZAQ-z1-ieY"/>
                         <outlet property="motherButton" destination="gbR-5Y-lcj" id="x1Z-rh-qnI"/>
                         <outlet property="nameTextField" destination="1oG-Kj-uzi" id="xvf-vS-J77"/>
+                        <segue destination="Vdr-2H-Bh6" kind="show" identifier="goMain" id="Q7P-IM-9NG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r2F-Fd-XQN" userLabel="First Responder" sceneMemberID="firstResponder"/>
