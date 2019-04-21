@@ -10,13 +10,16 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class HomeVC: UIViewController {
+class HomeVC: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
-    @IBOutlet weak var parentTableView: UITableView!
-    @IBOutlet weak var childTableView: UITableView!
+    @IBOutlet weak var parentTableView: DynamicTableView!
+    @IBOutlet weak var childTableView: DynamicTableView!
     @IBOutlet weak var familyNameLabel: UILabel!
     @IBOutlet weak var homeImageView: UIImageView!
     @IBOutlet weak var changeImageButton: UIButton!
+    var imagePicker = UIImagePickerController()
+    var parentTableViewHeight: CGFloat = 0
+    var childTableViewHeight: CGFloat = 0
     
     var homeViewModel: HomeViewModel!
     let disposeBag = DisposeBag()
@@ -30,7 +33,6 @@ class HomeVC: UIViewController {
             .drive(parentTableView.rx.items(cellIdentifier: "parentCell")) { _, repository, cell in
                 let parentCell = cell as? ParentCell
                 parentCell?.parentName.text = repository.name
-//                cell.imageView?.image = UIImage(contentsOfFile: repository.imageUrl)
             }
             .disposed(by: disposeBag)
         
@@ -41,6 +43,26 @@ class HomeVC: UIViewController {
             }
             .disposed(by: disposeBag)
     }
+    
+    @IBAction func selectImage(_ sender: Any) {
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = .photoLibrary
+            imagePicker.allowsEditing = false
+            
+            present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+
+//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+//        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
+//            homeImageView.image = image
+//            print(info)
+//        }
+//        dismiss(animated: true, completion: nil)
+//    }
 }
 
 class ParentCell: UITableViewCell {

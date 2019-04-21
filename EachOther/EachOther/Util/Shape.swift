@@ -22,3 +22,17 @@ class RoundButton: UIButton {
         layer.shadowOffset = CGSize.init(width: 1, height: 1)
     }
 }
+
+class DynamicTableView: UITableView {
+    var height: CGFloat = 0
+    
+    override func reloadData() {
+        super.reloadData()
+        self.invalidateIntrinsicContentSize()
+        self.layoutIfNeeded()
+    }
+    
+    override var intrinsicContentSize: CGSize {
+        return CGSize(width: contentSize.width, height: height)
+    }
+}
