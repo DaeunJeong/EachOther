@@ -46,23 +46,23 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate,UINavigationCont
     
     @IBAction func selectImage(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
-            
             imagePicker.delegate = self
             imagePicker.sourceType = .photoLibrary
             imagePicker.allowsEditing = false
-            
             present(imagePicker, animated: true, completion: nil)
         }
     }
     
-
-//    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-//        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage{
-//            homeImageView.image = image
-//            print(info)
-//        }
-//        dismiss(animated: true, completion: nil)
-//    }
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[.originalImage] as? UIImage {
+            homeImageView.image = image
+            
+        } else {
+            print("Error")
+        }
+        picker.dismiss(animated: true, completion: nil)
+    }
 }
 
 class ParentCell: UITableViewCell {

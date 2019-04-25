@@ -22,6 +22,7 @@ class HomeViewModel {
     let parentModels: Driver<[HomeFamilyMemberModel]>
     let childModels: Driver<[HomeFamilyMemberModel]>
     let image: Variable<URL>
+    let clickImageButton = PublishRelay<Void>()
     
     init() {
         let settings = FirestoreSettings()
