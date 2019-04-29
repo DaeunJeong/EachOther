@@ -22,6 +22,9 @@
 		C9126F8D224135B2007E7FE4 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9126F8C224135B2007E7FE4 /* CalendarCell.swift */; };
 		C9126F8F224136AC007E7FE4 /* SchedularVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9126F8E224136AC007E7FE4 /* SchedularVC.swift */; };
 		C916A446227709A6000DC0FB /* addPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = C916A445227709A6000DC0FB /* addPhoto.png */; };
+		C916A44822771073000DC0FB /* AlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C916A44722771073000DC0FB /* AlbumVC.swift */; };
+		C916A44A227710A2000DC0FB /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C916A449227710A2000DC0FB /* AlbumModel.swift */; };
+		C916A44C227710AC000DC0FB /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C916A44B227710AC000DC0FB /* AlbumViewModel.swift */; };
 		C95869BE224DB982002BCE55 /* CertifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95869BD224DB982002BCE55 /* CertifyModel.swift */; };
 		C96B3660224D13FA00A2B114 /* CertifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B365F224D13FA00A2B114 /* CertifyViewModel.swift */; };
 		C9743A4C2241CE740051F549 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4B2241CE740051F549 /* Base.swift */; };
@@ -70,6 +73,9 @@
 		C9126F8C224135B2007E7FE4 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		C9126F8E224136AC007E7FE4 /* SchedularVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedularVC.swift; sourceTree = "<group>"; };
 		C916A445227709A6000DC0FB /* addPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addPhoto.png; sourceTree = "<group>"; };
+		C916A44722771073000DC0FB /* AlbumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumVC.swift; sourceTree = "<group>"; };
+		C916A449227710A2000DC0FB /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlbumModel.swift; path = EachOther/VC/Main/AlbumModel.swift; sourceTree = SOURCE_ROOT; };
+		C916A44B227710AC000DC0FB /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlbumViewModel.swift; path = EachOther/VC/Main/AlbumViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C95869BD224DB982002BCE55 /* CertifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyModel.swift; sourceTree = "<group>"; };
 		C96B365F224D13FA00A2B114 /* CertifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyViewModel.swift; sourceTree = "<group>"; };
 		C9743A4B2241CE740051F549 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
@@ -229,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				C9C31CA8225B8330005E41F2 /* HomeModel.swift */,
+				C916A449227710A2000DC0FB /* AlbumModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -257,6 +264,7 @@
 			children = (
 				C9126F8E224136AC007E7FE4 /* SchedularVC.swift */,
 				C9C31CA6225B831A005E41F2 /* HomeVC.swift */,
+				C916A44722771073000DC0FB /* AlbumVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -265,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				C9C31CAA225B833C005E41F2 /* HomeViewModel.swift */,
+				C916A44B227710AC000DC0FB /* AlbumViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -485,6 +494,7 @@
 			files = (
 				C9D3B505225486E2009D0A87 /* ConnectViewModel.swift in Sources */,
 				C9C31CA7225B831A005E41F2 /* HomeVC.swift in Sources */,
+				C916A44C227710AC000DC0FB /* AlbumViewModel.swift in Sources */,
 				C9743A4C2241CE740051F549 /* Base.swift in Sources */,
 				C9C31CAB225B833C005E41F2 /* HomeViewModel.swift in Sources */,
 				C9D3B50322548686009D0A87 /* ConnectModel.swift in Sources */,
@@ -496,9 +506,11 @@
 				C9743A4E22420FAD0051F549 /* Shape.swift in Sources */,
 				C9126F892240DDF4007E7FE4 /* ConnectVC.swift in Sources */,
 				C9126F5E2240A629007E7FE4 /* StartVC.swift in Sources */,
+				C916A44A227710A2000DC0FB /* AlbumModel.swift in Sources */,
 				C95869BE224DB982002BCE55 /* CertifyModel.swift in Sources */,
 				C9126F5C2240A629007E7FE4 /* AppDelegate.swift in Sources */,
 				C9126F8B2240DE43007E7FE4 /* CertifyVC.swift in Sources */,
+				C916A44822771073000DC0FB /* AlbumVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

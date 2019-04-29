@@ -13,7 +13,7 @@
         <!--Item 2-->
         <scene sceneID="KVo-95-AXk">
             <objects>
-                <viewController id="RfD-2t-6yx" sceneMemberID="viewController">
+                <viewController id="RfD-2t-6yx" customClass="AlbumVC" customModule="EachOther" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LiQ-fT-XTP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="vgG-SX-idn">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="albumCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="albumCell" id="vgG-SX-idn" customClass="AlbumCell" customModule="EachOther" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="180"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vgG-SX-idn" id="4ax-YG-iDZ">
@@ -73,6 +73,12 @@
                                                 <constraint firstItem="34a-9v-X8M" firstAttribute="centerX" secondItem="4ax-YG-iDZ" secondAttribute="centerX" id="fYE-kz-SoZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="albumImage" destination="8cT-wz-1nm" id="oIH-iB-w2G"/>
+                                            <outlet property="dateLabel" destination="Udq-mM-gga" id="apW-q2-IxR"/>
+                                            <outlet property="placeLabel" destination="34a-9v-X8M" id="dmV-uW-wn5"/>
+                                            <outlet property="titleLabel" destination="mJ8-WT-rP8" id="1I4-mY-d9s"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -87,6 +93,9 @@
                         <viewLayoutGuide key="safeArea" id="c5Z-tY-VIo"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="lt0-Ih-lEf"/>
+                    <connections>
+                        <outlet property="albumTableView" destination="uQi-Wh-gXE" id="0Tc-DR-ppa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wtn-q0-pRK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
