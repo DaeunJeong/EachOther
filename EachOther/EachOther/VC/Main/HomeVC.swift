@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import FirebaseStorage
 
 class HomeVC: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
@@ -18,11 +19,10 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate,UINavigationCont
     @IBOutlet weak var homeImageView: UIImageView!
     @IBOutlet weak var changeImageButton: UIButton!
     var imagePicker = UIImagePickerController()
-    var parentTableViewHeight: CGFloat = 0
-    var childTableViewHeight: CGFloat = 0
     
     var homeViewModel: HomeViewModel!
     let disposeBag = DisposeBag()
+    let storage = Storage.storage()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +42,8 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate,UINavigationCont
                 childCell?.childName.text = repository.name
             }
             .disposed(by: disposeBag)
+        
+        homeViewModel.image.asObservable().bind(to: homeImageView.rx.image).disposed(by: disposeBag)
     }
     
     @IBAction func selectImage(_ sender: Any) {
@@ -58,6 +60,16 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate,UINavigationCont
         if let image = info[.originalImage] as? UIImage {
             homeImageView.image = image
             
+            let storageRef = storage.reference().child("\(UserDefaults.standard.string(forKey: "FAMILYCODE")!).png")
+            
+            let uploadData = homeImageView.image?.pngData() ?? Data()
+            
+            storageRef.putData(uploadData, metadata: nil, completion: { (metadata, error) in
+                if error != nil {
+                    print("ERROR")
+                }
+            })
+            
         } else {
             print("Error")
         }
@@ -66,11 +78,9 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate,UINavigationCont
 }
 
 class ParentCell: UITableViewCell {
-    @IBOutlet weak var parentImage: UIImageView!
     @IBOutlet weak var parentName: UILabel!
 }
 
 class ChildCell: UITableViewCell {
-    @IBOutlet weak var childImage: UIImageView!
     @IBOutlet weak var childName: UILabel!
 }

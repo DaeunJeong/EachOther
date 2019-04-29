@@ -11,6 +11,7 @@ pod 'JTAppleCalendar', '~> 7.0'
 pod 'DLRadioButton', '~> 1.4'
 pod 'Firebase/Firestore'
 pod 'Firebase/Core'
+pod 'Firebase/Storage'
   # Pods for EachOther
 
   target 'EachOtherTests' do

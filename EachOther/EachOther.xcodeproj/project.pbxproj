@@ -21,6 +21,7 @@
 		C9126F8B2240DE43007E7FE4 /* CertifyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9126F8A2240DE43007E7FE4 /* CertifyVC.swift */; };
 		C9126F8D224135B2007E7FE4 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9126F8C224135B2007E7FE4 /* CalendarCell.swift */; };
 		C9126F8F224136AC007E7FE4 /* SchedularVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9126F8E224136AC007E7FE4 /* SchedularVC.swift */; };
+		C916A446227709A6000DC0FB /* addPhoto.png in Resources */ = {isa = PBXBuildFile; fileRef = C916A445227709A6000DC0FB /* addPhoto.png */; };
 		C95869BE224DB982002BCE55 /* CertifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95869BD224DB982002BCE55 /* CertifyModel.swift */; };
 		C96B3660224D13FA00A2B114 /* CertifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B365F224D13FA00A2B114 /* CertifyViewModel.swift */; };
 		C9743A4C2241CE740051F549 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4B2241CE740051F549 /* Base.swift */; };
@@ -68,6 +69,7 @@
 		C9126F8A2240DE43007E7FE4 /* CertifyVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyVC.swift; sourceTree = "<group>"; };
 		C9126F8C224135B2007E7FE4 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
 		C9126F8E224136AC007E7FE4 /* SchedularVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchedularVC.swift; sourceTree = "<group>"; };
+		C916A445227709A6000DC0FB /* addPhoto.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addPhoto.png; sourceTree = "<group>"; };
 		C95869BD224DB982002BCE55 /* CertifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyModel.swift; sourceTree = "<group>"; };
 		C96B365F224D13FA00A2B114 /* CertifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyViewModel.swift; sourceTree = "<group>"; };
 		C9743A4B2241CE740051F549 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
@@ -171,6 +173,7 @@
 		C9126F7E2240A6A2007E7FE4 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				C916A445227709A6000DC0FB /* addPhoto.png */,
 				C9126F842240A821007E7FE4 /* familyImage.jpg */,
 			);
 			path = Image;
@@ -365,6 +368,7 @@
 				C9126F612240A629007E7FE4 /* Start.storyboard in Resources */,
 				C9126F852240A821007E7FE4 /* familyImage.jpg in Resources */,
 				C9790A8D22539D8E00E5CB44 /* GoogleService-Info.plist in Resources */,
+				C916A446227709A6000DC0FB /* addPhoto.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -390,6 +394,7 @@
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/DLRadioButton/DLRadioButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -409,6 +414,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DLRadioButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",

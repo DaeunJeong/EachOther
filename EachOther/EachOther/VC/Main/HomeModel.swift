@@ -13,7 +13,7 @@ class HomeModel {
     let familyName = Variable<String>("")
     let parentModels = Variable<[HomeFamilyMemberModel]>([])
     let childModels = Variable<[HomeFamilyMemberModel]>([])
-    let image = Variable<URL>(URL(fileURLWithPath: ""))
+    let image = Variable<UIImage>(UIImage())
 }
 
 struct HomeFamilyMemberModel {

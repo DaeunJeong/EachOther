@@ -10,6 +10,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 import FirebaseFirestore
+import FirebaseStorage
 
 class HomeViewModel {
     
@@ -21,13 +22,15 @@ class HomeViewModel {
     let familyName: Variable<String>
     let parentModels: Driver<[HomeFamilyMemberModel]>
     let childModels: Driver<[HomeFamilyMemberModel]>
-    let image: Variable<URL>
+    let image: Variable<UIImage>
     let clickImageButton = PublishRelay<Void>()
     
     init() {
         let settings = FirestoreSettings()
         Firestore.firestore().settings = settings
         db = Firestore.firestore()
+        let storage = Storage.storage()
+        let storageRef = storage.reference().child("\(UserDefaults.standard.string(forKey: "FAMILYCODE")!).png")
         
         homeModel = HomeModel()
         familyName = homeModel.familyName
@@ -64,6 +67,18 @@ class HomeViewModel {
                 }
             }
         }
+        
+        storageRef.getData(maxSize: 1 * 3000000 * 3000000, completion: { [weak self] (data, error) in
+            if let error = error {
+                dump(error)
+            } else {
+                if let data = data {
+                    self?.image.value = UIImage(data: data)!
+                } else {
+                    print("ERROR")
+                }
+            }
+        })
         
     }
 }
