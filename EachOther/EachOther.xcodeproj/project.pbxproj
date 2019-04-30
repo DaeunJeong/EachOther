@@ -25,6 +25,8 @@
 		C916A44822771073000DC0FB /* AlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C916A44722771073000DC0FB /* AlbumVC.swift */; };
 		C916A44A227710A2000DC0FB /* AlbumModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C916A449227710A2000DC0FB /* AlbumModel.swift */; };
 		C916A44C227710AC000DC0FB /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C916A44B227710AC000DC0FB /* AlbumViewModel.swift */; };
+		C95144412278263800B3C02B /* AddAlbumVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95144402278263800B3C02B /* AddAlbumVC.swift */; };
+		C95144432278297800B3C02B /* AddAlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95144422278297800B3C02B /* AddAlbumViewModel.swift */; };
 		C95869BE224DB982002BCE55 /* CertifyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C95869BD224DB982002BCE55 /* CertifyModel.swift */; };
 		C96B3660224D13FA00A2B114 /* CertifyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96B365F224D13FA00A2B114 /* CertifyViewModel.swift */; };
 		C9743A4C2241CE740051F549 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4B2241CE740051F549 /* Base.swift */; };
@@ -35,6 +37,7 @@
 		C9C31CAB225B833C005E41F2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C31CAA225B833C005E41F2 /* HomeViewModel.swift */; };
 		C9D3B50322548686009D0A87 /* ConnectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3B50222548685009D0A87 /* ConnectModel.swift */; };
 		C9D3B505225486E2009D0A87 /* ConnectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3B504225486E2009D0A87 /* ConnectViewModel.swift */; };
+		C9D62DAD2277322700942C82 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D62DAC2277322700942C82 /* MainVC.swift */; };
 		F1E7FF637EB3346565386FDA /* Pods_EachOtherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA6D99740CE4FC158FF0D8 /* Pods_EachOtherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +79,8 @@
 		C916A44722771073000DC0FB /* AlbumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumVC.swift; sourceTree = "<group>"; };
 		C916A449227710A2000DC0FB /* AlbumModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlbumModel.swift; path = EachOther/VC/Main/AlbumModel.swift; sourceTree = SOURCE_ROOT; };
 		C916A44B227710AC000DC0FB /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AlbumViewModel.swift; path = EachOther/VC/Main/AlbumViewModel.swift; sourceTree = SOURCE_ROOT; };
+		C95144402278263800B3C02B /* AddAlbumVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlbumVC.swift; sourceTree = "<group>"; };
+		C95144422278297800B3C02B /* AddAlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddAlbumViewModel.swift; path = EachOther/VC/Main/AddAlbumViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C95869BD224DB982002BCE55 /* CertifyModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyModel.swift; sourceTree = "<group>"; };
 		C96B365F224D13FA00A2B114 /* CertifyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertifyViewModel.swift; sourceTree = "<group>"; };
 		C9743A4B2241CE740051F549 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
@@ -86,6 +91,7 @@
 		C9C31CAA225B833C005E41F2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = EachOther/VC/Main/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C9D3B50222548685009D0A87 /* ConnectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectModel.swift; sourceTree = "<group>"; };
 		C9D3B504225486E2009D0A87 /* ConnectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewModel.swift; sourceTree = "<group>"; };
+		C9D62DAC2277322700942C82 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +271,8 @@
 				C9126F8E224136AC007E7FE4 /* SchedularVC.swift */,
 				C9C31CA6225B831A005E41F2 /* HomeVC.swift */,
 				C916A44722771073000DC0FB /* AlbumVC.swift */,
+				C9D62DAC2277322700942C82 /* MainVC.swift */,
+				C95144402278263800B3C02B /* AddAlbumVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -274,6 +282,7 @@
 			children = (
 				C9C31CAA225B833C005E41F2 /* HomeViewModel.swift */,
 				C916A44B227710AC000DC0FB /* AlbumViewModel.swift */,
+				C95144422278297800B3C02B /* AddAlbumViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -411,6 +420,7 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/TextFieldEffects/TextFieldEffects.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
@@ -431,6 +441,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TextFieldEffects.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
@@ -493,9 +504,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9D3B505225486E2009D0A87 /* ConnectViewModel.swift in Sources */,
+				C9D62DAD2277322700942C82 /* MainVC.swift in Sources */,
 				C9C31CA7225B831A005E41F2 /* HomeVC.swift in Sources */,
 				C916A44C227710AC000DC0FB /* AlbumViewModel.swift in Sources */,
+				C95144412278263800B3C02B /* AddAlbumVC.swift in Sources */,
 				C9743A4C2241CE740051F549 /* Base.swift in Sources */,
+				C95144432278297800B3C02B /* AddAlbumViewModel.swift in Sources */,
 				C9C31CAB225B833C005E41F2 /* HomeViewModel.swift in Sources */,
 				C9D3B50322548686009D0A87 /* ConnectModel.swift in Sources */,
 				C9126F642240A629007E7FE4 /* EachOther.xcdatamodeld in Sources */,
