@@ -8,10 +8,12 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
-struct AlbumModel {
-    let imagePath: String
-    let date: String
-    let title: String
-    let place: String
+class AlbumModel {
+    let data = Variable<Data>(Data())
+    let date = Variable<String>("")
+    let title = Variable<String>("")
+    let place = Variable<String>("")
 }

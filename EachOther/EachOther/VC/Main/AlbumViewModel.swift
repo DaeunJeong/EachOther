@@ -10,16 +10,18 @@ import Foundation
 import RxCocoa
 import RxSwift
 import FirebaseFirestore
+import FirebaseStorage
 
 class AlbumViewModel {
     
     var db: Firestore!
-    let albumModels = Variable<[AlbumModel]>?(nil)
+    let albumModels = Variable<[AlbumModel]>([])
     
     init() {
         let settings = FirestoreSettings()
         Firestore.firestore().settings = settings
         db = Firestore.firestore()
+        let storage = Storage.storage()
         
         let familyCode: String = UserDefaults.standard.string(forKey:"FAMILYCODE") ?? ""
         
@@ -35,8 +37,25 @@ class AlbumViewModel {
                     let place = document.data()["place"] as? String
                     
                     if let imagePath = imagePath, let title = title, let date = date, let place = place {
-                        let albumModel = AlbumModel(imagePath: imagePath, date: date, title: title, place: place)
-                        self.albumModels?.value.append(albumModel)
+                        
+                        let storageRef = storage.reference().child(imagePath)
+                        print(imagePath)
+                        storageRef.getData(maxSize: 1 * 3000000 * 3000000, completion: { (data, error) in
+                            if let error = error  {
+                                dump(error)
+                            } else {
+                                if let data = data {
+                                    let albumModel = AlbumModel()
+                                    albumModel.data.value = data
+                                    albumModel.date.value = date
+                                    albumModel.title.value = title
+                                    albumModel.place.value = place
+                                    self.albumModels.value.append(albumModel)
+                                } else {
+                                    print("ERROR")
+                                }
+                            }
+                        })
                     }
                     else {
                         print("NONE")

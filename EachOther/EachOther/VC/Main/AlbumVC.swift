@@ -21,10 +21,24 @@ class AlbumVC: UIViewController {
         
         albumViewModel = AlbumViewModel()
         
-        albumViewModel.albumModels?.asDriver().drive(albumTableView.rx.items(cellIdentifier: "albumCell", cellType: AlbumCell.self)) {_, album, cell in
-            cell.titleLabel.text = album.title
-            cell.dateLabel.text = album.date
-            cell.placeLabel.text = album.place
+        albumViewModel.albumModels.asDriver().drive(albumTableView.rx.items(cellIdentifier: "albumCell", cellType: AlbumCell.self)) {[weak self] _, album, cell in
+            guard let strongSelf = self else {return}
+            
+            album.title.asObservable()
+                .bind(to: cell.titleLabel.rx.text)
+                .disposed(by: strongSelf.disposeBag)
+            
+            album.date.asObservable()
+                .bind(to: cell.dateLabel.rx.text)
+                .disposed(by: strongSelf.disposeBag)
+            
+            album.place.asObservable()
+                .bind(to: cell.placeLabel.rx.text)
+                .disposed(by: strongSelf.disposeBag)
+            
+            album.data.asObservable().subscribe { data in
+                cell.albumImage.image = UIImage(data: data.element ?? Data())
+                }.disposed(by: strongSelf.disposeBag)
         }.disposed(by: disposeBag)
     }
 }

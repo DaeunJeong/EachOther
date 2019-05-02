@@ -18,22 +18,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="180" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uQi-Wh-gXE">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="200" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="uQi-Wh-gXE">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="albumCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="albumCell" id="vgG-SX-idn" customClass="AlbumCell" customModule="EachOther" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="180"/>
+                                    <tableViewCell clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" restorationIdentifier="albumCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="albumCell" id="vgG-SX-idn" customClass="AlbumCell" customModule="EachOther" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vgG-SX-idn" id="4ax-YG-iDZ">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8cT-wz-1nm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="179.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="190"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="190" id="rJq-K1-mhf"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019년 3월 15일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udq-mM-gga">
-                                                    <rect key="frame" x="37.5" y="52" width="300" height="19"/>
+                                                    <rect key="frame" x="37.5" y="62" width="300" height="19"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="7VT-wv-Hca"/>
                                                     </constraints>
@@ -43,7 +46,7 @@
                                                     <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="내 생일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJ8-WT-rP8">
-                                                    <rect key="frame" x="37.5" y="79" width="300" height="21.5"/>
+                                                    <rect key="frame" x="37.5" y="89" width="300" height="21.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="Y1V-JG-MnD"/>
                                                     </constraints>
@@ -53,7 +56,7 @@
                                                     <color key="shadowColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="집" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="34a-9v-X8M">
-                                                    <rect key="frame" x="37.5" y="104.5" width="300" height="17"/>
+                                                    <rect key="frame" x="37.5" y="114.5" width="300" height="17"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="300" id="U6K-AT-AGC"/>
                                                     </constraints>
@@ -65,15 +68,14 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="mJ8-WT-rP8" firstAttribute="top" secondItem="Udq-mM-gga" secondAttribute="bottom" constant="8" id="60Z-hh-w0k"/>
-                                                <constraint firstItem="8cT-wz-1nm" firstAttribute="height" secondItem="4ax-YG-iDZ" secondAttribute="height" id="AXK-QM-utB"/>
+                                                <constraint firstItem="8cT-wz-1nm" firstAttribute="leading" secondItem="4ax-YG-iDZ" secondAttribute="leading" id="Cjb-NF-fnD"/>
                                                 <constraint firstItem="34a-9v-X8M" firstAttribute="top" secondItem="mJ8-WT-rP8" secondAttribute="bottom" constant="4" id="Gpb-ev-4dU"/>
                                                 <constraint firstItem="mJ8-WT-rP8" firstAttribute="centerX" secondItem="4ax-YG-iDZ" secondAttribute="centerX" id="JmE-HG-Muj"/>
                                                 <constraint firstItem="Udq-mM-gga" firstAttribute="centerX" secondItem="4ax-YG-iDZ" secondAttribute="centerX" id="OSE-rN-Lqc"/>
-                                                <constraint firstItem="8cT-wz-1nm" firstAttribute="width" secondItem="4ax-YG-iDZ" secondAttribute="width" id="Q80-xF-PTr"/>
-                                                <constraint firstItem="8cT-wz-1nm" firstAttribute="centerX" secondItem="4ax-YG-iDZ" secondAttribute="centerX" id="RU1-cj-8rm"/>
-                                                <constraint firstItem="8cT-wz-1nm" firstAttribute="centerY" secondItem="4ax-YG-iDZ" secondAttribute="centerY" id="RVC-Qc-zF3"/>
                                                 <constraint firstItem="mJ8-WT-rP8" firstAttribute="centerY" secondItem="4ax-YG-iDZ" secondAttribute="centerY" id="aRi-sW-HqY"/>
+                                                <constraint firstAttribute="trailing" secondItem="8cT-wz-1nm" secondAttribute="trailing" id="c2o-HM-1iA"/>
                                                 <constraint firstItem="34a-9v-X8M" firstAttribute="centerX" secondItem="4ax-YG-iDZ" secondAttribute="centerX" id="fYE-kz-SoZ"/>
+                                                <constraint firstItem="8cT-wz-1nm" firstAttribute="top" secondItem="4ax-YG-iDZ" secondAttribute="top" id="v1e-k6-yKi"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -210,7 +212,7 @@
                                     <constraint firstAttribute="height" constant="1" id="yo2-Nq-9Td"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bYa-U6-3Z9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bYa-U6-3Z9">
                                 <rect key="frame" x="47.5" y="441" width="280" height="130"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="130" id="s55-p1-Yyr"/>

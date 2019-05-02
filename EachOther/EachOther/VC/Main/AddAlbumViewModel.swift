@@ -22,7 +22,7 @@ class AddAlbumViewModel {
     let image = BehaviorRelay<Data>(value: Data())
     let clickComplete = PublishRelay<Void>()
     let result = PublishRelay<Bool>()
-
+    
     
     init() {
         let settings = FirestoreSettings()
@@ -33,7 +33,7 @@ class AddAlbumViewModel {
         selectDate.subscribe(onNext:{ [weak self] date in
             
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy년MM월dd일"
+            dateFormatter.dateFormat = "yyyy년 MM월 dd일"
             let dateString = dateFormatter.string(from: date)
             
             self?.date.accept(dateString)
@@ -61,7 +61,7 @@ class AddAlbumViewModel {
                     print("ERROR")
                 }
             })
-        }.disposed(by: disposeBag)
+            }.disposed(by: disposeBag)
     }
     
     func generateCode() -> String {
