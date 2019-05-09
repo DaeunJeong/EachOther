@@ -32,6 +32,8 @@
 		C9743A4C2241CE740051F549 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4B2241CE740051F549 /* Base.swift */; };
 		C9743A4E22420FAD0051F549 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4D22420FAD0051F549 /* Shape.swift */; };
 		C9790A8D22539D8E00E5CB44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9790A8C22539D8E00E5CB44 /* GoogleService-Info.plist */; };
+		C9AFFB672282627000FC17DA /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFFB662282627000FC17DA /* ChatVC.swift */; };
+		C9AFFB692282E67F00FC17DA /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFFB682282E67F00FC17DA /* ChatViewModel.swift */; };
 		C9C31CA7225B831A005E41F2 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C31CA6225B831A005E41F2 /* HomeVC.swift */; };
 		C9C31CA9225B8330005E41F2 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C31CA8225B8330005E41F2 /* HomeModel.swift */; };
 		C9C31CAB225B833C005E41F2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C31CAA225B833C005E41F2 /* HomeViewModel.swift */; };
@@ -86,6 +88,8 @@
 		C9743A4B2241CE740051F549 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		C9743A4D22420FAD0051F549 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		C9790A8C22539D8E00E5CB44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C9AFFB662282627000FC17DA /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		C9AFFB682282E67F00FC17DA /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewModel.swift; path = EachOther/VC/Main/ChatViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C9C31CA6225B831A005E41F2 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		C9C31CA8225B8330005E41F2 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeModel.swift; path = EachOther/VC/Main/HomeModel.swift; sourceTree = SOURCE_ROOT; };
 		C9C31CAA225B833C005E41F2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = EachOther/VC/Main/HomeViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -273,6 +277,7 @@
 				C916A44722771073000DC0FB /* AlbumVC.swift */,
 				C9D62DAC2277322700942C82 /* MainVC.swift */,
 				C95144402278263800B3C02B /* AddAlbumVC.swift */,
+				C9AFFB662282627000FC17DA /* ChatVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -283,6 +288,7 @@
 				C9C31CAA225B833C005E41F2 /* HomeViewModel.swift */,
 				C916A44B227710AC000DC0FB /* AlbumViewModel.swift */,
 				C95144422278297800B3C02B /* AddAlbumViewModel.swift */,
+				C9AFFB682282E67F00FC17DA /* ChatViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -513,7 +519,9 @@
 				C9C31CAB225B833C005E41F2 /* HomeViewModel.swift in Sources */,
 				C9D3B50322548686009D0A87 /* ConnectModel.swift in Sources */,
 				C9126F642240A629007E7FE4 /* EachOther.xcdatamodeld in Sources */,
+				C9AFFB692282E67F00FC17DA /* ChatViewModel.swift in Sources */,
 				C9126F8F224136AC007E7FE4 /* SchedularVC.swift in Sources */,
+				C9AFFB672282627000FC17DA /* ChatVC.swift in Sources */,
 				C9126F8D224135B2007E7FE4 /* CalendarCell.swift in Sources */,
 				C96B3660224D13FA00A2B114 /* CertifyViewModel.swift in Sources */,
 				C9C31CA9225B8330005E41F2 /* HomeModel.swift in Sources */,

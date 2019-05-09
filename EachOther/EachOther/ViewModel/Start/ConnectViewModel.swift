@@ -61,6 +61,7 @@ class ConnectViewModel {
                     if let err = err {
                         self?.result.accept(err)
                     } else {
+                        UserDefaults.standard.set(self?.connectModel.name.value, forKey: "NAME")
                         UserDefaults.standard.set(self?.connectModel.code.value, forKey: "FAMILYCODE")
                         self?.result.accept(err)
                     }
