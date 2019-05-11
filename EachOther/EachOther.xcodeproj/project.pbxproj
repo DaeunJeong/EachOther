@@ -32,6 +32,7 @@
 		C9743A4C2241CE740051F549 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4B2241CE740051F549 /* Base.swift */; };
 		C9743A4E22420FAD0051F549 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4D22420FAD0051F549 /* Shape.swift */; };
 		C9790A8D22539D8E00E5CB44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9790A8C22539D8E00E5CB44 /* GoogleService-Info.plist */; };
+		C9A18DB52283ADDC00B7160C /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A18DB42283ADDC00B7160C /* ChatModel.swift */; };
 		C9AFFB672282627000FC17DA /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFFB662282627000FC17DA /* ChatVC.swift */; };
 		C9AFFB692282E67F00FC17DA /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFFB682282E67F00FC17DA /* ChatViewModel.swift */; };
 		C9C31CA7225B831A005E41F2 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C31CA6225B831A005E41F2 /* HomeVC.swift */; };
@@ -88,6 +89,7 @@
 		C9743A4B2241CE740051F549 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		C9743A4D22420FAD0051F549 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		C9790A8C22539D8E00E5CB44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C9A18DB42283ADDC00B7160C /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		C9AFFB662282627000FC17DA /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C9AFFB682282E67F00FC17DA /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewModel.swift; path = EachOther/VC/Main/ChatViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C9C31CA6225B831A005E41F2 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
@@ -246,6 +248,7 @@
 			children = (
 				C9C31CA8225B8330005E41F2 /* HomeModel.swift */,
 				C916A449227710A2000DC0FB /* AlbumModel.swift */,
+				C9A18DB42283ADDC00B7160C /* ChatModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -421,6 +424,7 @@
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/RxAtomic/RxAtomic.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
@@ -442,6 +446,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxAtomic.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
@@ -524,6 +529,7 @@
 				C9AFFB672282627000FC17DA /* ChatVC.swift in Sources */,
 				C9126F8D224135B2007E7FE4 /* CalendarCell.swift in Sources */,
 				C96B3660224D13FA00A2B114 /* CertifyViewModel.swift in Sources */,
+				C9A18DB52283ADDC00B7160C /* ChatModel.swift in Sources */,
 				C9C31CA9225B8330005E41F2 /* HomeModel.swift in Sources */,
 				C9743A4E22420FAD0051F549 /* Shape.swift in Sources */,
 				C9126F892240DDF4007E7FE4 /* ConnectVC.swift in Sources */,

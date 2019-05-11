@@ -11,8 +11,10 @@ pod 'JTAppleCalendar', '~> 7.0'
 pod 'DLRadioButton', '~> 1.4'
 pod 'Firebase/Firestore'
 pod 'Firebase/Core'
+pod 'Firebase/Database'
 pod 'Firebase/Storage'
 pod 'TextFieldEffects'
+pod 'ObjectMapper'
   # Pods for EachOther
 
   target 'EachOtherTests' do
