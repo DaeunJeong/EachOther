@@ -627,6 +627,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dateLabel" destination="CFj-tu-uWG" id="x11-02-F7d"/>
+                                                    <outlet property="dotView" destination="NAK-Cw-ga9" id="foT-Bj-VFt"/>
                                                     <outlet property="selectedView" destination="5HN-sl-bSg" id="4xo-gl-0ga"/>
                                                 </connections>
                                             </collectionViewCell>

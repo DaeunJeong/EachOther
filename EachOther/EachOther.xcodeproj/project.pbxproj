@@ -209,7 +209,6 @@
 		C9126F812240A6C0007E7FE4 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				C9126F8C224135B2007E7FE4 /* CalendarCell.swift */,
 				C9743A4B2241CE740051F549 /* Base.swift */,
 				C9743A4D22420FAD0051F549 /* Shape.swift */,
 			);
@@ -281,6 +280,7 @@
 				C9D62DAC2277322700942C82 /* MainVC.swift */,
 				C95144402278263800B3C02B /* AddAlbumVC.swift */,
 				C9AFFB662282627000FC17DA /* ChatVC.swift */,
+				C9126F8C224135B2007E7FE4 /* CalendarCell.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
