@@ -14,7 +14,7 @@ import FirebaseDatabase
 class ChatViewModel {
     let clickSend = PublishRelay<Void>()
     let messageText = BehaviorRelay<String>(value: "")
-    let chatModel = BehaviorRelay<[ChatModel]>(value: [])
+    let chatModel = BehaviorRelay<[CellType]>(value: [])
     let disposeBag = DisposeBag()
     
     init() {
@@ -33,23 +33,26 @@ class ChatViewModel {
         
         if let code = code {
             Database.database().reference().child(code).child("message").observe(DataEventType.value, with: { (datasnapshot) in
-                var models: [ChatModel.Message] = []
+                var models: [CellType] = []
                 
                 for item in datasnapshot.children.allObjects as! [DataSnapshot] {
-
+                    
                     let model = ChatModel.Message(JSON: item.value as! [String:AnyObject])
                     if let model = model {
-                        models.append(model)
+                        if model.name == UserDefaults.standard.string(forKey: "NAME") {
+                            models.append(.MyMessages(model))
+                        } else {
+                            models.append(.YourMessages(model))
+                        }
                     }
                 }
-                dump(models)
+                self.chatModel.accept(models)
             })
         }
     }
 }
 
-class ChatData: Codable {
-    let message: String
-    let timeStamp: Int
-    let name: String
+enum CellType {
+    case YourMessages(ChatModel.Message)
+    case MyMessages(ChatModel.Message)
 }

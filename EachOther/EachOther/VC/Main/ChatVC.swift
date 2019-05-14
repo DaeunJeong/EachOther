@@ -34,6 +34,21 @@ class ChatVC: UIViewController {
             .bind(to: messageTextField.rx.text)
             .disposed(by: disposeBag)
         
+        chatViewModel.chatModel.bind(to: self.chatTableView.rx.items) { (tableview, row, item) in
+            
+            switch item {
+            case .MyMessages(let value):
+                let cell = self.chatTableView.dequeueReusableCell(withIdentifier: "MyMessageCell") as! MyChatCell
+                cell.myMessageLabel.text = value.message ?? ""
+                return cell
+            case .YourMessages(let value):
+                let cell = self.chatTableView.dequeueReusableCell(withIdentifier: "YourMessageCell") as! YourChatCell
+                cell.yourNameLabel.text = value.name ?? ""
+                cell.yourMessageLabel.text = value.message ?? ""
+                return cell
+            }
+        }.disposed(by: disposeBag)
+        
     }
 }
 
@@ -42,5 +57,6 @@ class MyChatCell: UITableViewCell {
 }
 
 class YourChatCell: UITableViewCell {
-    
+    @IBOutlet weak var yourNameLabel: UILabel!
+    @IBOutlet weak var yourMessageLabel: UILabel!
 }
