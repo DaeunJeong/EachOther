@@ -13,6 +13,7 @@ class SchedularVC: UIViewController {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var yearMonthLabel: UILabel!
     let formatter = DateFormatter()
+    var calendarDataSource: [String:String] = [:]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +21,8 @@ class SchedularVC: UIViewController {
         setUpCalendarView()
         calendarView.scrollToDate(Date(),animateScroll:false)
         calendarView.selectDates([Date()])
+        
+        populateDataSource()
     }
     
     func setUpCalendarView() {
@@ -58,8 +61,33 @@ class SchedularVC: UIViewController {
     func setUpViewsOfCalendar(from visibleDates: DateSegmentInfo) {
         let date = visibleDates.monthDates.first!.date
         
-        self.formatter.dateFormat = "yyyy.MM"
-        self.yearMonthLabel.text = self.formatter.string(from: date)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy.MM"
+        self.yearMonthLabel.text = formatter.string(from: date)
+    }
+    
+    func populateDataSource() {
+        // update the datrasource
+        calendarDataSource = [
+            "2019 05 03": "SomeData",
+            "2019 04 01": "SomeMoreData"
+        ]
+        calendarView.reloadData()
+    }
+    
+    func configureCell(view: CalendarCell?, cellState: CellState) {
+        guard let cell = view as? CalendarCell  else { return }
+        cell.dateLabel.text = cellState.text
+        handleCellEvents(cell: cell, cellState: cellState)
+    }
+    
+    func handleCellEvents(cell: CalendarCell, cellState: CellState) {
+        let dateString = formatter.string(from: cellState.date)
+        if calendarDataSource[dateString] == nil {
+            cell.dotView.isHidden = true
+        } else {
+            cell.dotView.isHidden = false
+        }
     }
 }
 
@@ -84,6 +112,7 @@ extension SchedularVC: JTAppleCalendarViewDelegate {
         cell.dateLabel.text = cellState.text
         handleCellSelected(view: cell, cellState: cellState)
         handleCellTextColor(view: cell, cellState: cellState)
+        handleCellEvents(cell: cell, cellState: cellState)
         return cell
     }
     
@@ -106,3 +135,5 @@ extension SchedularVC: JTAppleCalendarViewDelegate {
         setUpViewsOfCalendar(from: visibleDates)
     }
 }
+
+
