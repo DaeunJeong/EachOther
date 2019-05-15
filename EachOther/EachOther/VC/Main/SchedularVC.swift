@@ -67,18 +67,11 @@ class SchedularVC: UIViewController {
     }
     
     func populateDataSource() {
-        // update the datrasource
         calendarDataSource = [
             "2019 05 03": "SomeData",
             "2019 04 01": "SomeMoreData"
         ]
         calendarView.reloadData()
-    }
-    
-    func configureCell(view: CalendarCell?, cellState: CellState) {
-        guard let cell = view as? CalendarCell  else { return }
-        cell.dateLabel.text = cellState.text
-        handleCellEvents(cell: cell, cellState: cellState)
     }
     
     func handleCellEvents(cell: CalendarCell, cellState: CellState) {

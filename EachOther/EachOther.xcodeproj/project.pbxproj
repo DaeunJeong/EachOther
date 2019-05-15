@@ -41,6 +41,9 @@
 		C9D3B50322548686009D0A87 /* ConnectModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3B50222548685009D0A87 /* ConnectModel.swift */; };
 		C9D3B505225486E2009D0A87 /* ConnectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3B504225486E2009D0A87 /* ConnectViewModel.swift */; };
 		C9D62DAD2277322700942C82 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D62DAC2277322700942C82 /* MainVC.swift */; };
+		C9F3ED98228C14EE0007FBF5 /* AddScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F3ED97228C14EE0007FBF5 /* AddScheduleVC.swift */; };
+		C9F3ED9A228C151D0007FBF5 /* AddScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F3ED99228C151D0007FBF5 /* AddScheduleModel.swift */; };
+		C9F3ED9C228C152D0007FBF5 /* AddScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F3ED9B228C152D0007FBF5 /* AddScheduleModel.swift */; };
 		F1E7FF637EB3346565386FDA /* Pods_EachOtherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA6D99740CE4FC158FF0D8 /* Pods_EachOtherTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -98,6 +101,9 @@
 		C9D3B50222548685009D0A87 /* ConnectModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectModel.swift; sourceTree = "<group>"; };
 		C9D3B504225486E2009D0A87 /* ConnectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewModel.swift; sourceTree = "<group>"; };
 		C9D62DAC2277322700942C82 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		C9F3ED97228C14EE0007FBF5 /* AddScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleVC.swift; sourceTree = "<group>"; };
+		C9F3ED99228C151D0007FBF5 /* AddScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddScheduleModel.swift; path = EachOther/VC/Main/AddScheduleModel.swift; sourceTree = SOURCE_ROOT; };
+		C9F3ED9B228C152D0007FBF5 /* AddScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -248,6 +254,7 @@
 				C9C31CA8225B8330005E41F2 /* HomeModel.swift */,
 				C916A449227710A2000DC0FB /* AlbumModel.swift */,
 				C9A18DB42283ADDC00B7160C /* ChatModel.swift */,
+				C9F3ED9B228C152D0007FBF5 /* AddScheduleModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -281,6 +288,7 @@
 				C95144402278263800B3C02B /* AddAlbumVC.swift */,
 				C9AFFB662282627000FC17DA /* ChatVC.swift */,
 				C9126F8C224135B2007E7FE4 /* CalendarCell.swift */,
+				C9F3ED97228C14EE0007FBF5 /* AddScheduleVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -292,6 +300,7 @@
 				C916A44B227710AC000DC0FB /* AlbumViewModel.swift */,
 				C95144422278297800B3C02B /* AddAlbumViewModel.swift */,
 				C9AFFB682282E67F00FC17DA /* ChatViewModel.swift */,
+				C9F3ED99228C151D0007FBF5 /* AddScheduleModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -514,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9F3ED9A228C151D0007FBF5 /* AddScheduleModel.swift in Sources */,
 				C9D3B505225486E2009D0A87 /* ConnectViewModel.swift in Sources */,
 				C9D62DAD2277322700942C82 /* MainVC.swift in Sources */,
 				C9C31CA7225B831A005E41F2 /* HomeVC.swift in Sources */,
@@ -521,9 +531,11 @@
 				C95144412278263800B3C02B /* AddAlbumVC.swift in Sources */,
 				C9743A4C2241CE740051F549 /* Base.swift in Sources */,
 				C95144432278297800B3C02B /* AddAlbumViewModel.swift in Sources */,
+				C9F3ED98228C14EE0007FBF5 /* AddScheduleVC.swift in Sources */,
 				C9C31CAB225B833C005E41F2 /* HomeViewModel.swift in Sources */,
 				C9D3B50322548686009D0A87 /* ConnectModel.swift in Sources */,
 				C9126F642240A629007E7FE4 /* EachOther.xcdatamodeld in Sources */,
+				C9F3ED9C228C152D0007FBF5 /* AddScheduleModel.swift in Sources */,
 				C9AFFB692282E67F00FC17DA /* ChatViewModel.swift in Sources */,
 				C9126F8F224136AC007E7FE4 /* SchedularVC.swift in Sources */,
 				C9AFFB672282627000FC17DA /* ChatVC.swift in Sources */,
