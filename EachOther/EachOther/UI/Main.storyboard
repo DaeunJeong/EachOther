@@ -614,6 +614,11 @@
                                                                 <constraint firstAttribute="height" constant="8" id="aBU-OG-ZSE"/>
                                                                 <constraint firstAttribute="width" constant="8" id="oXD-hO-YvS"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
                                                         </view>
                                                     </subviews>
                                                 </view>

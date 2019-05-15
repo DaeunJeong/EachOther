@@ -42,7 +42,7 @@
 		C9D3B505225486E2009D0A87 /* ConnectViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D3B504225486E2009D0A87 /* ConnectViewModel.swift */; };
 		C9D62DAD2277322700942C82 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D62DAC2277322700942C82 /* MainVC.swift */; };
 		C9F3ED98228C14EE0007FBF5 /* AddScheduleVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F3ED97228C14EE0007FBF5 /* AddScheduleVC.swift */; };
-		C9F3ED9A228C151D0007FBF5 /* AddScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F3ED99228C151D0007FBF5 /* AddScheduleModel.swift */; };
+		C9F3ED9A228C151D0007FBF5 /* AddScheduleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F3ED99228C151D0007FBF5 /* AddScheduleViewModel.swift */; };
 		C9F3ED9C228C152D0007FBF5 /* AddScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F3ED9B228C152D0007FBF5 /* AddScheduleModel.swift */; };
 		F1E7FF637EB3346565386FDA /* Pods_EachOtherTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1BA6D99740CE4FC158FF0D8 /* Pods_EachOtherTests.framework */; };
 /* End PBXBuildFile section */
@@ -102,7 +102,7 @@
 		C9D3B504225486E2009D0A87 /* ConnectViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectViewModel.swift; sourceTree = "<group>"; };
 		C9D62DAC2277322700942C82 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		C9F3ED97228C14EE0007FBF5 /* AddScheduleVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleVC.swift; sourceTree = "<group>"; };
-		C9F3ED99228C151D0007FBF5 /* AddScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddScheduleModel.swift; path = EachOther/VC/Main/AddScheduleModel.swift; sourceTree = SOURCE_ROOT; };
+		C9F3ED99228C151D0007FBF5 /* AddScheduleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddScheduleViewModel.swift; path = EachOther/VC/Main/AddScheduleViewModel.swift; sourceTree = SOURCE_ROOT; };
 		C9F3ED9B228C152D0007FBF5 /* AddScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddScheduleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -300,7 +300,7 @@
 				C916A44B227710AC000DC0FB /* AlbumViewModel.swift */,
 				C95144422278297800B3C02B /* AddAlbumViewModel.swift */,
 				C9AFFB682282E67F00FC17DA /* ChatViewModel.swift */,
-				C9F3ED99228C151D0007FBF5 /* AddScheduleModel.swift */,
+				C9F3ED99228C151D0007FBF5 /* AddScheduleViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -523,7 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9F3ED9A228C151D0007FBF5 /* AddScheduleModel.swift in Sources */,
+				C9F3ED9A228C151D0007FBF5 /* AddScheduleViewModel.swift in Sources */,
 				C9D3B505225486E2009D0A87 /* ConnectViewModel.swift in Sources */,
 				C9D62DAD2277322700942C82 /* MainVC.swift in Sources */,
 				C9C31CA7225B831A005E41F2 /* HomeVC.swift in Sources */,
