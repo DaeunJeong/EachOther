@@ -8,12 +8,14 @@
 
 import UIKit
 import JTAppleCalendar
+import FirebaseFirestore
 
 class SchedularVC: UIViewController {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var yearMonthLabel: UILabel!
     let formatter = DateFormatter()
     var calendarDataSource: [String:String] = [:]
+    var db: Firestore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +24,25 @@ class SchedularVC: UIViewController {
         calendarView.scrollToDate(Date(),animateScroll:false)
         calendarView.selectDates([Date()])
         
-        populateDataSource()
+        let settings = FirestoreSettings()
+        Firestore.firestore().settings = settings
+        db = Firestore.firestore()
+        
+        let familyCode = UserDefaults.standard.string(forKey: "FAMILYCODE") ?? ""
+        
+        db.collection(familyCode).document("schedule").getDocument {[weak self] (querySnapshot, err) in
+            guard let strongSelf = self else {return}
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                if let querySnapshot = querySnapshot {
+                    let date = querySnapshot.data()?["date"] as? String ?? ""
+                    let comment = querySnapshot.data()?["comment"] as? String ?? ""
+                    strongSelf.calendarDataSource[date] = comment
+                }
+            }
+            strongSelf.calendarView.reloadData()
+        }
     }
     
     func setUpCalendarView() {
@@ -46,7 +66,6 @@ class SchedularVC: UIViewController {
                 validCell.dateLabel.textColor = UIColor.lightGray
             }
         }
-        
     }
     
     func handleCellSelected(view: JTAppleCell?, cellState: CellState) {
@@ -64,14 +83,6 @@ class SchedularVC: UIViewController {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy.MM"
         self.yearMonthLabel.text = formatter.string(from: date)
-    }
-    
-    func populateDataSource() {
-        calendarDataSource = [
-            "2019 05 03": "SomeData",
-            "2019 04 01": "SomeMoreData"
-        ]
-        calendarView.reloadData()
     }
     
     func handleCellEvents(cell: CalendarCell, cellState: CellState) {
@@ -128,5 +139,3 @@ extension SchedularVC: JTAppleCalendarViewDelegate {
         setUpViewsOfCalendar(from: visibleDates)
     }
 }
-
-
