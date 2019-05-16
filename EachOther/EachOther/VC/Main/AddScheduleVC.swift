@@ -32,8 +32,14 @@ class AddScheduleVC: UIViewController {
         output.result.asObservable().subscribe { result in
             if let result = result.element {
                 switch result {
-                case .success: print("SUCCESS")
-                case .fail: print("FAIL")
+                case .success:
+                    let alert = UIAlertController(title: "성공", message: "일정 등록이 완료되었습니다.", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: {(UIAlertAction) -> Void in _ = self.navigationController?.popToRootViewController(animated: true)}))
+                self.present(alert, animated: true, completion: nil)
+                case .fail:
+                    let alert = UIAlertController(title: "오류", message: "", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "확인", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
                 case .none: print("NONE")
                 }
             }
