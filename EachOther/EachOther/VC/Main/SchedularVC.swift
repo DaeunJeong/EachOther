@@ -9,13 +9,17 @@
 import UIKit
 import JTAppleCalendar
 import FirebaseFirestore
+import RxSwift
+import RxCocoa
 
 class SchedularVC: UIViewController {
     @IBOutlet weak var calendarView: JTAppleCalendarView!
     @IBOutlet weak var yearMonthLabel: UILabel!
+    @IBOutlet weak var commentTableView: UITableView!
     let formatter = DateFormatter()
     var calendarDataSource: [String:String] = [:]
     var db: Firestore!
+    let commentString = BehaviorRelay<String>(value: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +76,14 @@ class SchedularVC: UIViewController {
         guard let validCell = view as? CalendarCell else {return}
         if cellState.isSelected {
             validCell.selectedView.isHidden = false
+            let dateString = formatter.string(from: cellState.date)
+            if let comment = calendarDataSource[dateString] {
+                commentString.accept(comment)
+                commentTableView.reloadData()
+            } else {
+                commentString.accept("")
+                commentTableView.reloadData()
+            }
         } else {
             validCell.selectedView.isHidden = true
         }
@@ -138,4 +150,21 @@ extension SchedularVC: JTAppleCalendarViewDelegate {
     func calendar(_ calendar: JTAppleCalendarView, didScrollToDateSegmentWith visibleDates: DateSegmentInfo) {
         setUpViewsOfCalendar(from: visibleDates)
     }
+}
+
+extension SchedularVC: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell") as! CommentCell
+        cell.selectionStyle = UITableViewCell.SelectionStyle.none
+        commentString.bind(to: cell.commentLabel.rx.text).dispose()
+        return cell
+    }
+}
+
+class CommentCell: UITableViewCell {
+    @IBOutlet weak var commentLabel: UILabel!
 }

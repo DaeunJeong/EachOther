@@ -652,7 +652,7 @@
                                 <rect key="frame" x="0.0" y="386.5" width="375" height="231.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="sVr-JY-i7z">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="commentCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="commentCell" id="sVr-JY-i7z" customClass="CommentCell" customModule="EachOther" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sVr-JY-i7z" id="wHC-UV-ds5">
@@ -671,8 +671,15 @@
                                                 <constraint firstItem="2dw-KQ-Yvg" firstAttribute="centerY" secondItem="wHC-UV-ds5" secondAttribute="centerY" id="Bmd-Jr-OLb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="2dw-KQ-Yvg" id="CKh-de-grI"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Xu8-ov-wXg" id="6vD-Qm-2xY"/>
+                                    <outlet property="delegate" destination="Xu8-ov-wXg" id="rif-9F-QXs"/>
+                                </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cb6-94-25E">
                                 <rect key="frame" x="300" y="543" width="55" height="55"/>
@@ -713,6 +720,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="F2a-sK-ykl"/>
                     <connections>
                         <outlet property="calendarView" destination="bPV-NV-SNI" id="DZD-5c-m62"/>
+                        <outlet property="commentTableView" destination="KJO-Ed-1A6" id="dEp-sE-AYt"/>
                         <outlet property="yearMonthLabel" destination="2aY-tz-fjm" id="Y8q-0f-3E7"/>
                     </connections>
                 </viewController>
