@@ -34,14 +34,14 @@ class SchedularVC: UIViewController {
         
         let familyCode = UserDefaults.standard.string(forKey: "FAMILYCODE") ?? ""
         
-        db.collection(familyCode).document("schedule").getDocument {[weak self] (querySnapshot, err) in
+        db.collection(familyCode).document("schedule").collection("schedule").getDocuments { [weak self] (querySnapshot, err) in
             guard let strongSelf = self else {return}
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                if let querySnapshot = querySnapshot {
-                    let date = querySnapshot.data()?["date"] as? String ?? ""
-                    let comment = querySnapshot.data()?["comment"] as? String ?? ""
+                for document in querySnapshot!.documents {
+                    let date = document.documentID
+                    let comment = document.data()["comment"] as? String ?? ""
                     strongSelf.calendarDataSource[date] = comment
                 }
             }

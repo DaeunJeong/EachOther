@@ -58,7 +58,7 @@ class AddScheduleViewModel {
         input.clickComplete.asObservable().subscribe { [weak self] _ in
             guard let strongSelf = self else {return}
 
-            strongSelf.db.collection(familyCode).document("schedule").setData(["date": dateString.value,"comment": comment.value]) { err in
+            strongSelf.db.collection(familyCode).document("schedule").collection("schedule").document(dateString.value).setData(["comment": comment.value]) { err in
                 if let err = err {
                     dump(err)
                     result.accept(.fail)
