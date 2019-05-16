@@ -405,10 +405,10 @@
             </objects>
             <point key="canvasLocation" x="-303.19999999999999" y="1351.5742128935533"/>
         </scene>
-        <!--View Controller-->
+        <!--Add ScheduleVC-->
         <scene sceneID="JMw-GW-Rgv">
             <objects>
-                <viewController id="OAA-QO-jpb" sceneMemberID="viewController">
+                <viewController id="OAA-QO-jpb" customClass="AddScheduleVC" customModule="EachOther" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Z5S-6H-wGx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -467,6 +467,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZIR-kR-zBM"/>
                     </view>
+                    <connections>
+                        <outlet property="commentTextField" destination="Swh-My-Pgg" id="Yon-qN-mlp"/>
+                        <outlet property="datePicker" destination="X5T-DK-jMe" id="8hA-6L-Nse"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tY-2M-HDQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -616,7 +620,7 @@
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                                                    <integer key="value" value="1"/>
+                                                                    <integer key="value" value="5"/>
                                                                 </userDefinedRuntimeAttribute>
                                                             </userDefinedRuntimeAttributes>
                                                         </view>
