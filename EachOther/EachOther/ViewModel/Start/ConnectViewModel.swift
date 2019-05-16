@@ -83,6 +83,7 @@ class ConnectViewModel {
                         UserDefaults.standard.set(self?.connectModel.name.value, forKey: "NAME")
                         UserDefaults.standard.set(self?.connectModel.code.value, forKey: "FAMILYCODE")
                         UserDefaults.standard.set(self?.birthDayString.value, forKey: "BIRTHDAY")
+                        UserDefaults.standard.set(self?.connectModel.role.value, forKey: "ROLE")
                         self?.result.accept(err)
                     }
                 }

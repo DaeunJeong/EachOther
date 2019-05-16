@@ -731,7 +731,7 @@
         <!--Item-->
         <scene sceneID="xRQ-P6-5uz">
             <objects>
-                <viewController id="hto-3r-77t" sceneMemberID="viewController">
+                <viewController id="hto-3r-77t" customClass="MyPageVC" customModule="EachOther" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XTt-34-a9P">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -809,10 +809,25 @@
                         <viewLayoutGuide key="safeArea" id="xRV-fZ-dbB"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="Ofj-J7-EwR"/>
+                    <connections>
+                        <outlet property="birthdayDatePicker" destination="Nsf-bT-1vJ" id="Hti-e5-0pk"/>
+                        <outlet property="completeButton" destination="rfv-AD-Z5E" id="1uX-y0-4pV"/>
+                        <outlet property="logoutButton" destination="bk5-1s-SSo" id="gY3-Fc-KVb"/>
+                        <outlet property="nameTextField" destination="1UN-jz-NVX" id="bFC-HK-uXk"/>
+                        <segue destination="k5w-hF-YAR" kind="show" identifier="goStart" id="bhZ-bx-ris"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xph-Ng-F93" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1056.8" y="637.33133433283365"/>
+        </scene>
+        <!--Start-->
+        <scene sceneID="yRf-fD-RiY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Start" id="k5w-hF-YAR" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8yH-FY-r5L" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1631" y="618"/>
         </scene>
         <!--Item 1-->
         <scene sceneID="dBG-e4-mpr">
