@@ -32,6 +32,8 @@
 		C9743A4C2241CE740051F549 /* Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4B2241CE740051F549 /* Base.swift */; };
 		C9743A4E22420FAD0051F549 /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9743A4D22420FAD0051F549 /* Shape.swift */; };
 		C9790A8D22539D8E00E5CB44 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9790A8C22539D8E00E5CB44 /* GoogleService-Info.plist */; };
+		C979E963228D29E500210E25 /* MyPageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C979E962228D29E500210E25 /* MyPageViewModel.swift */; };
+		C979E965228D2A0800210E25 /* MyPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C979E964228D2A0800210E25 /* MyPageVC.swift */; };
 		C9A18DB52283ADDC00B7160C /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A18DB42283ADDC00B7160C /* ChatModel.swift */; };
 		C9AFFB672282627000FC17DA /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFFB662282627000FC17DA /* ChatVC.swift */; };
 		C9AFFB692282E67F00FC17DA /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9AFFB682282E67F00FC17DA /* ChatViewModel.swift */; };
@@ -92,6 +94,8 @@
 		C9743A4B2241CE740051F549 /* Base.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base.swift; sourceTree = "<group>"; };
 		C9743A4D22420FAD0051F549 /* Shape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shape.swift; sourceTree = "<group>"; };
 		C9790A8C22539D8E00E5CB44 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C979E962228D29E500210E25 /* MyPageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyPageViewModel.swift; path = EachOther/Model/Main/MyPageViewModel.swift; sourceTree = SOURCE_ROOT; };
+		C979E964228D2A0800210E25 /* MyPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageVC.swift; sourceTree = "<group>"; };
 		C9A18DB42283ADDC00B7160C /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
 		C9AFFB662282627000FC17DA /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		C9AFFB682282E67F00FC17DA /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatViewModel.swift; path = EachOther/VC/Main/ChatViewModel.swift; sourceTree = SOURCE_ROOT; };
@@ -289,6 +293,7 @@
 				C9AFFB662282627000FC17DA /* ChatVC.swift */,
 				C9126F8C224135B2007E7FE4 /* CalendarCell.swift */,
 				C9F3ED97228C14EE0007FBF5 /* AddScheduleVC.swift */,
+				C979E964228D2A0800210E25 /* MyPageVC.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -301,6 +306,7 @@
 				C95144422278297800B3C02B /* AddAlbumViewModel.swift */,
 				C9AFFB682282E67F00FC17DA /* ChatViewModel.swift */,
 				C9F3ED99228C151D0007FBF5 /* AddScheduleViewModel.swift */,
+				C979E962228D29E500210E25 /* MyPageViewModel.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -530,6 +536,7 @@
 				C916A44C227710AC000DC0FB /* AlbumViewModel.swift in Sources */,
 				C95144412278263800B3C02B /* AddAlbumVC.swift in Sources */,
 				C9743A4C2241CE740051F549 /* Base.swift in Sources */,
+				C979E965228D2A0800210E25 /* MyPageVC.swift in Sources */,
 				C95144432278297800B3C02B /* AddAlbumViewModel.swift in Sources */,
 				C9F3ED98228C14EE0007FBF5 /* AddScheduleVC.swift in Sources */,
 				C9C31CAB225B833C005E41F2 /* HomeViewModel.swift in Sources */,
@@ -540,6 +547,7 @@
 				C9126F8F224136AC007E7FE4 /* SchedularVC.swift in Sources */,
 				C9AFFB672282627000FC17DA /* ChatVC.swift in Sources */,
 				C9126F8D224135B2007E7FE4 /* CalendarCell.swift in Sources */,
+				C979E963228D29E500210E25 /* MyPageViewModel.swift in Sources */,
 				C96B3660224D13FA00A2B114 /* CertifyViewModel.swift in Sources */,
 				C9A18DB52283ADDC00B7160C /* ChatModel.swift in Sources */,
 				C9C31CA9225B8330005E41F2 /* HomeModel.swift in Sources */,

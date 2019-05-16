@@ -737,13 +737,19 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="생일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1C5-N9-w0c">
-                                <rect key="frame" x="30" y="300" width="29.5" height="20.5"/>
+                                <rect key="frame" x="30" y="150" width="29.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyR-Il-1HZ">
+                                <rect key="frame" x="30" y="74.5" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="Nsf-bT-1vJ">
-                                <rect key="frame" x="0.0" y="330.5" width="375" height="150"/>
+                                <rect key="frame" x="0.0" y="180.5" width="375" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="ceM-3p-Obe"/>
                                 </constraints>
@@ -753,7 +759,7 @@
                                 <locale key="locale" localeIdentifier="ko_KR"/>
                             </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1UN-jz-NVX">
-                                <rect key="frame" x="87.5" y="220" width="200" height="30"/>
+                                <rect key="frame" x="87.5" y="70" width="200" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="200" id="g38-aX-q3N"/>
                                 </constraints>
@@ -763,26 +769,41 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bk5-1s-SSo" customClass="RoundButton" customModule="EachOther" customModuleProvider="target">
                                 <rect key="frame" x="20" y="553" width="335" height="45"/>
-                                <color key="backgroundColor" red="0.51226496700000002" green="0.85831612349999997" blue="0.87451893089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="fIz-iS-KdZ"/>
                                     <constraint firstAttribute="width" constant="335" id="lvO-tp-rvu"/>
                                 </constraints>
                                 <state key="normal" title="로그아웃">
+                                    <color key="titleColor" red="0.50835913420000001" green="0.85840529200000004" blue="0.87059694529999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rfv-AD-Z5E" customClass="RoundButton" customModule="EachOther" customModuleProvider="target">
+                                <rect key="frame" x="20" y="500" width="335" height="45"/>
+                                <color key="backgroundColor" red="0.51226496700000002" green="0.85831612349999997" blue="0.87451893089999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="335" id="RO9-5q-XlT"/>
+                                    <constraint firstAttribute="height" constant="45" id="kHl-nM-ZRS"/>
+                                </constraints>
+                                <state key="normal" title="내 정보 수정">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="SyR-Il-1HZ" firstAttribute="leading" secondItem="xRV-fZ-dbB" secondAttribute="leading" constant="30" id="6RM-hV-9PH"/>
                             <constraint firstItem="1C5-N9-w0c" firstAttribute="leading" secondItem="xRV-fZ-dbB" secondAttribute="leading" constant="30" id="9pA-29-9gq"/>
+                            <constraint firstItem="rfv-AD-Z5E" firstAttribute="centerX" secondItem="XTt-34-a9P" secondAttribute="centerX" id="Fuj-J5-la6"/>
                             <constraint firstItem="Nsf-bT-1vJ" firstAttribute="trailing" secondItem="xRV-fZ-dbB" secondAttribute="trailing" id="Hao-Sb-WPA"/>
                             <constraint firstItem="Nsf-bT-1vJ" firstAttribute="top" secondItem="1C5-N9-w0c" secondAttribute="bottom" constant="10" id="KUr-TQ-L5Z"/>
                             <constraint firstItem="1C5-N9-w0c" firstAttribute="top" secondItem="1UN-jz-NVX" secondAttribute="bottom" constant="50" id="NQf-pW-QV4"/>
-                            <constraint firstItem="1UN-jz-NVX" firstAttribute="top" secondItem="xRV-fZ-dbB" secondAttribute="top" constant="200" id="RWW-gw-eK1"/>
+                            <constraint firstItem="bk5-1s-SSo" firstAttribute="top" secondItem="rfv-AD-Z5E" secondAttribute="bottom" constant="8" id="QHg-nH-xoZ"/>
+                            <constraint firstItem="1UN-jz-NVX" firstAttribute="top" secondItem="xRV-fZ-dbB" secondAttribute="top" constant="50" id="RWW-gw-eK1"/>
                             <constraint firstItem="Nsf-bT-1vJ" firstAttribute="leading" secondItem="xRV-fZ-dbB" secondAttribute="leading" id="WrN-FS-WYZ"/>
                             <constraint firstItem="bk5-1s-SSo" firstAttribute="centerX" secondItem="XTt-34-a9P" secondAttribute="centerX" id="bAn-6Z-Mca"/>
                             <constraint firstItem="1UN-jz-NVX" firstAttribute="centerX" secondItem="XTt-34-a9P" secondAttribute="centerX" id="gLM-fG-WzR"/>
+                            <constraint firstItem="SyR-Il-1HZ" firstAttribute="centerY" secondItem="1UN-jz-NVX" secondAttribute="centerY" id="sqZ-w8-tSD"/>
                             <constraint firstItem="xRV-fZ-dbB" firstAttribute="bottom" secondItem="bk5-1s-SSo" secondAttribute="bottom" constant="20" id="xK2-QT-ATa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xRV-fZ-dbB"/>
@@ -804,16 +825,6 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PoO-oe-Hco">
                                 <rect key="frame" x="0.0" y="20" width="375" height="598"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="정다운가족" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJb-x7-gL1">
-                                <rect key="frame" x="97.5" y="40" width="180" height="22.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="180" id="gsZ-Nk-oei"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                            </label>
                             <button opaque="NO" alpha="0.45000000000000001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odK-yE-iBU">
                                 <rect key="frame" x="20" y="568" width="30" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -932,9 +943,7 @@
                             <constraint firstItem="dkJ-kk-iI4" firstAttribute="top" secondItem="KFw-qF-zVS" secondAttribute="top" constant="10" id="FUg-Rz-AZE"/>
                             <constraint firstItem="KFw-qF-zVS" firstAttribute="bottom" secondItem="odK-yE-iBU" secondAttribute="bottom" constant="20" id="LLh-oK-nlh"/>
                             <constraint firstItem="KFw-qF-zVS" firstAttribute="bottom" secondItem="PoO-oe-Hco" secondAttribute="bottom" id="PpR-J8-7Of"/>
-                            <constraint firstItem="JJb-x7-gL1" firstAttribute="top" secondItem="KFw-qF-zVS" secondAttribute="top" constant="20" id="RJP-FX-i9o"/>
                             <constraint firstItem="PoO-oe-Hco" firstAttribute="leading" secondItem="KFw-qF-zVS" secondAttribute="leading" id="YWm-mI-act"/>
-                            <constraint firstItem="JJb-x7-gL1" firstAttribute="centerX" secondItem="OZF-hk-kyK" secondAttribute="centerX" id="ZmL-XX-jtt"/>
                             <constraint firstItem="X1Z-mN-eWF" firstAttribute="top" secondItem="KFw-qF-zVS" secondAttribute="top" constant="10" id="aXx-jV-yDh"/>
                             <constraint firstItem="KFw-qF-zVS" firstAttribute="trailing" secondItem="PoO-oe-Hco" secondAttribute="trailing" id="bkP-Np-fWl"/>
                             <constraint firstItem="X1Z-mN-eWF" firstAttribute="leading" secondItem="KFw-qF-zVS" secondAttribute="leading" constant="10" id="ne3-N2-kIW"/>
@@ -947,7 +956,6 @@
                     <connections>
                         <outlet property="changeImageButton" destination="odK-yE-iBU" id="ic0-Yn-lEZ"/>
                         <outlet property="childTableView" destination="dkJ-kk-iI4" id="lAN-FY-vae"/>
-                        <outlet property="familyNameLabel" destination="JJb-x7-gL1" id="0Xl-XP-gtX"/>
                         <outlet property="homeImageView" destination="PoO-oe-Hco" id="24j-Fp-0k8"/>
                         <outlet property="parentTableView" destination="X1Z-mN-eWF" id="Qqw-rW-9d2"/>
                     </connections>
