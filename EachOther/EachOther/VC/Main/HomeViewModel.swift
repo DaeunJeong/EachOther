@@ -46,9 +46,6 @@ class HomeViewModel {
             } else {
                 for document in querySnapshot!.documents {
                     let name = document.documentID
-                    //                    let date = document.data()["birthday"] as? Timestamp
-                    //                    let birthday = NSDate(timeIntervalSince1970: TimeInterval(date?.seconds ?? 0 / 1000))
-                    
                     let childModel = HomeFamilyMemberModel(name: name)
                     self.homeModel.childModels.value.append(childModel)
                 }

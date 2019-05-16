@@ -15,7 +15,6 @@ class HomeVC: UIViewController, UIImagePickerControllerDelegate,UINavigationCont
 
     @IBOutlet weak var parentTableView: DynamicTableView!
     @IBOutlet weak var childTableView: DynamicTableView!
-    @IBOutlet weak var familyNameLabel: UILabel!
     @IBOutlet weak var homeImageView: UIImageView!
     @IBOutlet weak var changeImageButton: UIButton!
     var imagePicker = UIImagePickerController()
