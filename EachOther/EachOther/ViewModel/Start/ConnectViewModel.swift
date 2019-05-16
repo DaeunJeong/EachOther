@@ -29,6 +29,7 @@ class ConnectViewModel {
     let child = PublishRelay<Void>()
     let connect = PublishRelay<Void>()
     let result = PublishRelay<Error?>()
+    let birthDayString = BehaviorRelay<String>(value: "")
     
     init() {
         let settings = FirestoreSettings()
@@ -53,10 +54,19 @@ class ConnectViewModel {
                 self?.connectEnabled.accept(isConnectEnabled)
             }).disposed(by: disposeBag)
         
+        connectModel.birthday.asObservable().subscribe {[weak self] date in
+            guard let strongSelf = self else {return}
+            if let date = date.element {
+                let formatter = DateFormatter()
+                formatter.dateFormat = "yyyy MM dd"
+                strongSelf.birthDayString.accept(formatter.string(from: date))
+            }
+        }.disposed(by: disposeBag)
+        
         connect
             .subscribe(onNext: { [weak self] _ in
                 self?.db.collection(self?.connectModel.code.value ?? "ERROR").document("userInfo").collection(self?.connectModel.role.value ?? "").document(self?.connectModel.name.value ?? "ERROR").setData([
-                    "birthday": self?.connectModel.birthday.value ?? "ERROR"
+                    "birthday": self?.birthDayString.value ?? "ERROR"
                 ]) { err in
                     if let err = err {
                         self?.result.accept(err)
