@@ -71,8 +71,18 @@ class ConnectViewModel {
                     if let err = err {
                         self?.result.accept(err)
                     } else {
+                        let formatter = DateFormatter()
+                        formatter.dateFormat = "2019 MM dd"
+                        let thisYearBirthday = formatter.string(from: self?.connectModel.birthday.value ?? Date())
+                        self?.db.collection(self?.connectModel.code.value ?? "ERROR").document("schedule").collection("schedule").document(thisYearBirthday).setData(["comment":"\(self?.connectModel.name.value ?? "") 생일"]) { err in
+                            if let err = err {
+                                dump(err)
+                            }
+                        }
+                        
                         UserDefaults.standard.set(self?.connectModel.name.value, forKey: "NAME")
                         UserDefaults.standard.set(self?.connectModel.code.value, forKey: "FAMILYCODE")
+                        UserDefaults.standard.set(self?.birthDayString.value, forKey: "BIRTHDAY")
                         self?.result.accept(err)
                     }
                 }
